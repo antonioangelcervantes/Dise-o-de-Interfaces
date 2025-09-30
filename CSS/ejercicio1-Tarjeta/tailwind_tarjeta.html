@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio CSS - Tarjeta de presentación (Tailwind)</title>
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- 1) Fondo del body distinto -->
+<!-- 11) Tipografía general sans -->
+<body class="min-h-screen bg-cyan-200 font-sans">
+  <!-- 4) Margen exterior y centrado   2) Fondo tarjeta   3) Borde 2px sólido   5) Padding interno   12) Tamaño base heredado -->
+  <div class="tarjeta max-w-sm mx-auto my-10 bg-white border-4 border-gray-700 rounded-xl p-6">
+    <!-- 6) Título centrado   11) Tipografía serif -->
+    <h1 class="text-2xl font-serif text-center mb-3">Mi tarjeta de presentación</h1>
+
+    <!-- 7) Párrafo justificado   12) Tamaño de fuente -->
+    <p class="text-justify text-base mb-4">
+      Hola, me llamo Antonio
+      <!-- 8) Estilo especial para el apellido: color texto, fondo, padding, borde redondeado -->
+      <span class="px-1 py-0.5 rounded bg-amber-100 text-amber-900">Cervantes</span>
+    </p>
+
+    <!-- 9) Sin viñetas   12) Tamaño de fuente en lista -->
+    <ul class="list-none text-base">
+      <!-- 10) Fondo suave en li + separación con márgenes -->
+      <li class="bg-slate-100 rounded p-2 mb-2">Leer</li>
+      <li class="bg-slate-100 rounded p-2 mb-2">Viajar</li>
+      <li class="bg-slate-100 rounded p-2">Programar</li>
+    </ul>
+  </div>
+  <footer class="bg-green-200 max-w-sm mx-auto text-center rounded-xl border-4 border-red-700">Realizado por Antonio Cervantes</footer>
+
+</body>
+</html>
