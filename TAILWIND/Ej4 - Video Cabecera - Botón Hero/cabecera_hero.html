@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Vídeo Cabecera con Botón</title>
+</head>
+<body class="bg-gray-900">
+
+  <!-- CABECERA con vídeo -->
+  <header class="relative w-full h-[40vh] overflow-hidden">
+
+    <!-- Vídeo -->
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
+      <source src="video/surfer.mp4" type="video/mp4">
+    </video>
+
+    <!-- Botón en la parte inferior -->
+    <a href="#formulario"
+       class="absolute bottom-10 left-1/2 -translate-x-1/2
+              bg-white text-black font-semibold py-3 px-6 rounded-lg
+              hover:bg-blue-300 transition duration-300">
+      Ir al formulario
+    </a>
+
+  </header>
+
+  <!-- Resto del contenido -->
+  <main class="p-6 text-gray-200">
+    <h1 class="text-2xl font-bold mb-4">Tarjetas productos</h1>
+  </main>
+
+</body>
+</html>
