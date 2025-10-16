@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flexbox – Versión Alumno</title>
+  <style>
+    /* Estilos mínimos para ver las cajas*/
+    body { font-family: system-ui, sans-serif; margin: 16px; }
+    section { margin: 20px 0; padding: 12px; border: 1px dashed #ccc; }
+    h2 { margin: 0 0 8px; font-size: 18px; }
+    .contenedor { /* aquí el alumnado añade flex, etc. */ }
+    .caja { width: 60px; height: 60px; background: #eee; border: 1px solid #aaa; display: inline-block; }
+    .nota { color: #555; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>Flexbox – Práctica Alumno</h1>
+  <p class="nota">Trabaja en cada sección (#e1…#e8). Añade tus reglas CSS en un archivo externo o dentro de &lt;style&gt;.</p>
+
+  <section id="e1">
+    <h2>Ejercicio 1 – Activar Flex y centrar</h2>
+    <div class="contenedor">
+      <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+    </div>
+  </section>
+
+  <section id="e2">
+    <h2>Ejercicio 2 – gap</h2>
+    <div class="contenedor">
+      <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+    </div>
+  </section>
+
+  <section id="e3">
+    <h2>Ejercicio 3 – justify-content</h2>
+    <div class="contenedor">
+      <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+    </div>
+  </section>
+
+  <section id="e4">
+    <h2>Ejercicio 4 – align-items</h2>
+    <div class="contenedor" style="height:150px;">
+      <div class="caja" style="height:50px;">1</div><div class="caja" style="height:50px;">2</div><div class="caja" style="height:50px;">3</div>
+    </div>
+  </section>
+
+  <section id="e5">
+    <h2>Ejercicio 5 – flex-direction</h2>
+    <div class="contenedor">
+      <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+    </div>
+  </section>
+
+  <section id="e6">
+    <h2>Ejercicio 6 – order</h2>
+    <div class="contenedor">
+      <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+    </div>
+  </section>
+
+  <section id="e7">
+    <h2>Ejercicio 7 – flex grow/shrink/basis</h2>
+    <div class="contenedor">
+      <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+    </div>
+  </section>
+
+  <section id="e8">
+    <h2>Ejercicio 8 – wrap</h2>
+    <p class="nota">Duplica las cajas para apreciar la envoltura.</p>
+    <div class="contenedor">
+      <div class="caja">1</div><div class="caja">2</div><div class="caja">3</div>
+      <div class="caja">4</div><div class="caja">5</div><div class="caja">6</div>
+    </div>
+  </section>
+</body>
+</html>
