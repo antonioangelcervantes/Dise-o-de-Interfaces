@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minireto – Tarjeta de perfil (Guía con pistas)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen">
+  <!-- PISTA GENERAL: Centra la tarjeta usando flex sobre el <body> o un contenedor principal. 
+       Revisa: https://tailwindcss.com/docs/justify-content y https://tailwindcss.com/docs/align-items -->
+  <main class="/* TODO: añade clases para centrar en pantalla (por ejemplo: flex justify-center items-center min-h-screen bg-slate-100) */">
+    <!-- PISTA: La tarjeta debe tener padding, borde redondeado y sombra. 
+         Revisa: p-*, rounded-*, shadow-*, border -->
+    <article class="/* TODO: p-*, rounded-*, shadow-*, border, max-w-md, w-full */">
+      
+      <!-- PISTA: Coloca imagen y texto en fila desde md (pantallas medianas), en móvil en columna.
+           Revisa: flex, flex-col, md:flex-row, gap-*, items-center -->
+      <div class="/* TODO: flex-col md:flex-row items-center gap-* */">
+        
+        <!-- PISTA: La imagen debe verse circular y recortada.
+             Revisa: w-*, h-*, rounded-full, object-cover, border-* -->
+        <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Foto de perfil"
+             class="/* TODO: w-*, h-*, rounded-full, object-cover, border-4 border-blue-200 */">
+        
+        <!-- PISTA: El bloque de texto debe poder centrarse en móvil y alinearse a la izquierda en escritorio.
+             Revisa: items-center md:items-start, text-center md:text-left -->
+        <section class="/* TODO: flex flex-col items-center md:items-start text-center md:text-left */">
+          <h2 class="/* TODO: text-2xl font-bold text-slate-800 */">Nombre Apellido</h2>
+          <p class="/* TODO: text-slate-600 mt-1 */">
+            Breve descripción: estudios, intereses o rol profesional.
+          </p>
+          
+          <!-- PISTA: Los botones deben estar en un contenedor flex; céntralos o alinéalos a la izquierda según el ancho.
+               Revisa: flex, justify-center, md:justify-start, gap-*, mt-* -->
+          <div class="/* TODO: flex justify-center md:justify-start gap-* mt-* */">
+            <button class="/* TODO: bg-blue-500 hover:bg-blue-600 text-white px-* py-* rounded-full transition */">Seguir</button>
+            <button class="/* TODO: bg-slate-200 hover:bg-slate-300 text-slate-800 px-* py-* rounded-full transition */">Mensaje</button>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
