@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Práctica – Flex con Tailwind (Soluciones Profesorado)</title>
+  <!-- Tailwind vía CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-slate-800">
+  <main class="max-w-4xl mx-auto p-4 space-y-10">
+    <header>
+      <h1 class="text-2xl font-bold">Práctica – Flex con Tailwind (Soluciones)</h1>
+      <p class="text-sm text-slate-600">Estas soluciones muestran una posible configuración mínima por ejercicio.</p>
+    </header>
+
+    <!-- #e1 -->
+    <section id="e1" class="border-t pt-6">
+      <h2 class="text-xl font-semibold mb-3">#e1 – Activar flex y centrar en el eje principal</h2>
+      <div class="flex justify-center gap-4">
+        <div class="w-16 h-16 bg-slate-300 rounded flex items-center justify-center">1</div>
+        <div class="w-16 h-16 bg-slate-300 rounded flex items-center justify-center">2</div>
+        <div class="w-16 h-16 bg-slate-300 rounded flex items-center justify-center">3</div>
+      </div>
+    </section>
+
+    <!-- #e2 -->
+    <section id="e2" class="border-t pt-6">
+      <h2 class="text-xl font-semibold mb-3">#e2 – Separación uniforme entre cajas</h2>
+      <div class="flex gap-6">
+        <div class="w-16 h-16 bg-emerald-300 rounded"></div>
+        <div class="w-16 h-16 bg-emerald-300 rounded"></div>
+        <div class="w-16 h-16 bg-emerald-300 rounded"></div>
+      </div>
+    </section>
+
+    <!-- #e3 -->
+    <section id="e3" class="border-t pt-6">
+      <h2 class="text-xl font-semibold mb-4">#e3 – Distribuciones en el eje principal</h2>
+      <!-- Inicio -->
+      <div class="flex justify-start gap-4">
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+      </div>
+      <!-- Centro -->
+      <div class="flex justify-center gap-4 mt-4">
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+      </div>
+      <!-- Final -->
+      <div class="flex justify-end gap-4 mt-4">
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+        <div class="w-14 h-14 bg-indigo-300 rounded"></div>
+      </div>
+    </section>
+
+    <!-- #e4 -->
+    <section id="e4" class="border-t pt-6">
+      <h2 class="text-xl font-semibold mb-3">#e4 – Alineación vertical perceptible</h2>
+      <!-- Arriba -->
+      <div class="flex items-start h-64 border rounded p-3 gap-3">
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+      </div>
+      <!-- Centro -->
+      <div class="flex items-center h-64 border rounded p-3 gap-3 mt-4">
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+      </div>
+      <!-- Abajo -->
+      <div class="flex items-end h-64 border rounded p-3 gap-3 mt-4">
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+        <div class="w-16 h-16 bg-pink-300 rounded"></div>
+      </div>
+    </section>
+
+    <!-- #e5 -->
+    <section id="e5" class="border-t pt-6">
+      <h2 class="text-xl font-semibold mb-3">#e5 – Dirección fila ↔ columna</h2>
+      <!-- Fila -->
+      <div class="flex flex-row gap-4">
+        <div class="w-16 h-16 bg-amber-300 rounded"></div>
+        <div class="w-16 h-16 bg-amber-300 rounded"></div>
+        <div class="w-16 h-16 bg-amber-300 rounded"></div>
+      </div>
+      <!-- Columna -->
+      <div class="flex flex-col gap-4 mt-4">
+        <div class="w-16 h-16 bg-amber-300 rounded"></div>
+        <div class="w-16 h-16 bg-amber-300 rounded"></div>
+        <div class="w-16 h-16 bg-amber-300 rounded"></div>
+      </div>
+    </section>
+
+    <!-- #e6 -->
+    <section id="e6" class="border-t pt-6">
+      <h2 class="text-xl font-semibold mb-3">#e6 – Reordenación visual</h2>
+      <div class="flex gap-4">
+        <div class="order-3 w-16 h-16 bg-blue-300 rounded flex items-center justify-center">1</div>
+        <div class="order-2 w-16 h-16 bg-blue-300 rounded flex items-center justify-center">2</div>
+        <div class="order-1 w-16 h-16 bg-blue-300 rounded flex items-center justify-center">3</div>
+      </div>
+    </section>
+
+    <!-- #e7 -->
+    <section id="e7" class="border-t pt-6">
+      <h2 class="text-xl font-semibold mb-4">#e7 – Tamaños flexibles (grow / shrink / basis)</h2>
+      <!-- a) Reparto igual -->
+      <div class="flex gap-4 w-full">
+        <div class="flex-1 h-16 bg-lime-300 rounded"></div>
+        <div class="flex-1 h-16 bg-lime-300 rounded"></div>
+        <div class="flex-1 h-16 bg-lime-300 rounded"></div>
+      </div>
+      <!-- b) Primera doble -->
+      <div class="flex gap-4 w-full mt-4">
+        <div class="flex-[2_1_0%] h-16 bg-lime-300 rounded"></div>
+        <div class="flex-1 h-16 bg-lime-300 rounded"></div>
+        <div class="flex-1 h-16 bg-lime-300 rounded"></div>
+      </div>
+      <!-- c) Tercera fija a 100px sin crecer ni encoger -->
+      <div class="flex gap-4 w-full mt-4">
+        <div class="flex-1 h-16 bg-lime-300 rounded"></div>
+        <div class="flex-1 h-16 bg-lime-300 rounded"></div>
+        <div class="basis-[100px] flex-none h-16 bg-lime-300 rounded"></div>
+      </div>
+    </section>
+
+    <!-- #e8 -->
+    <section id="e8" class="border-t pt-6">
+      <h2 class="text-xl font-semibold mb-3">#e8 – Envoltura (wrap)</h2>
+      <div class="flex flex-wrap gap-4">
+        <div class="basis-40 shrink-0 grow-0 h-24 bg-rose-300 rounded"></div>
+        <div class="basis-40 shrink-0 grow-0 h-24 bg-rose-300 rounded"></div>
+        <div class="basis-40 shrink-0 grow-0 h-24 bg-rose-300 rounded"></div>
+        <div class="basis-40 shrink-0 grow-0 h-24 bg-rose-300 rounded"></div>
+        <div class="basis-40 shrink-0 grow-0 h-24 bg-rose-300 rounded"></div>
+        <div class="basis-40 shrink-0 grow-0 h-24 bg-rose-300 rounded"></div>
+        <div class="basis-40 shrink-0 grow-0 h-24 bg-rose-300 rounded"></div>
+        <div class="basis-40 shrink-0 grow-0 h-24 bg-rose-300 rounded"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

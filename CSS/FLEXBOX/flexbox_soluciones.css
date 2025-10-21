@@ -1,0 +1,59 @@
+/* Flexbox – Soluciones por secciones (#e1…#e8) */
+
+/* Base visual para todo */
+.contenedor { min-height: 60px; display: flex;}
+.caja { display: block; text-align: center; line-height: 60px; }
+
+/* ===== Ejercicio 1 ===== */
+#e1 { display: flex; justify-content: center; }
+#e1 .caja { width: 60px; height: 60px; background: #ddd; border: 1px solid #999; }
+
+/* ===== Ejercicio 2 ===== */
+#e2 { display: flex; justify-content: center; gap: 12px; }
+#e2 .caja { width: 60px; height: 60px; background: #ddd; border: 1px solid #999; }
+
+/* ===== Ejercicio 3 ===== */
+#e3 { display: flex; gap: 12px; justify-content: space-between; }
+#e3 .caja { width: 60px; height: 60px; background: #cfe8ff; border: 1px solid #999; }
+
+/* ===== Ejercicio 4 ===== */
+#e4 {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* probar: flex-start, center, flex-end, stretch */
+  gap: 12px;
+  height: 150px;
+  border: 1px dashed #aaa;
+}
+#e4 .caja { width: 60px; height: 50px; background: #cfe8ff; }
+
+/* ===== Ejercicio 5 ===== */
+#e5 { display: flex; gap: 12px; flex-direction: column; }
+#e5 .caja { width: 60px; height: 60px; background: #ffd9c0; border: 1px solid #999; }
+
+/* ===== Ejercicio 6 ===== */
+#e6 { display: flex; gap: 12px; }
+#e6 .caja { width: 60px; height: 60px; background: #e8ffd9; border: 1px solid #999; }
+#e6 .caja:nth-child(1) { order: 2; }
+#e6 .caja:nth-child(2) { order: 1; }
+#e6 .caja:nth-child(3) { order: 0; }
+
+/* ===== Ejercicio 7 ===== */
+#e7 { display: flex; gap: 12px; }
+#e7 .caja { flex: 1; min-width: 0; background: #fcead2; border: 1px solid #999; }
+#e7 .caja:nth-child(1) { flex: 2; }
+#e7 .caja:nth-child(3) { flex: 0 0 100px; }
+
+/* ===== Ejercicio 8 ===== */
+#e8 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border: 1px dashed #aaa;
+}
+#e8 .caja {
+  flex: 0 0 120px;
+  height: 60px;
+  background: #f0e6ff;
+  border: 1px solid #999;
+}

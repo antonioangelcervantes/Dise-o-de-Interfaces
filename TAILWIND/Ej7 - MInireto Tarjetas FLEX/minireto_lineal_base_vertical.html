@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minireto – Lineal de tarjetas (Base – Móvil vertical)</title>
+  <!-- Tailwind CDN para pruebas -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- TODO: añade un fondo suave y tipografía legible al body. 
+       Sugerencia breve: bg-slate-100, text-slate-800, min-h-screen. -->
+
+  <main>
+    <!-- TODO: contenedor centrado con ancho máx. y padding.
+         Pista: max-w-6xl, mx-auto, p-4. -->
+    <header>
+      <h1>Productos recomendados</h1>
+      <p>En móvil: lista vertical. Desde md: carrusel horizontal. En lg: wrap opcional.</p>
+      <!-- TODO: separa el header del lineal con un margen inferior. -->
+    </header>
+
+    <!-- LINEAL de tarjetas -->
+    <!-- Requisitos:
+         - Base (móvil): flex-col + gap (lista vertical sin overflow-x).
+         - md: pasar a fila horizontal con scroll (flex-row, flex-nowrap, overflow-x-auto).
+         - lg: permitir wrap (flex-wrap) y quitar overflow-x si procede. -->
+    <section class="">
+      
+      <!-- Tarjeta patrón: crea 4–6 tarjetas similares -->
+      <article class="">
+        <div class="">
+          <!-- TODO: placeholder de imagen centrado y altura fija. -->
+          <span>IMG 1</span>
+        </div>
+        <div class="">
+          <h3>Título del producto</h3>
+          <p>Breve descripción del producto con una o dos frases.</p>
+        </div>
+        <button>Acción</button>
+      </article>
+
+      <article class="">
+        <div class=""><span>IMG 2</span></div>
+        <div class="">
+          <h3>Otro producto</h3>
+          <p>Texto de ejemplo. Cambia contenidos para ver alturas distintas.</p>
+        </div>
+        <button>Acción</button>
+      </article>
+
+      <article class="">
+        <div class=""><span>IMG 3</span></div>
+        <div class="">
+          <h3>Producto 3</h3>
+          <p>Más información breve para probar el ritmo visual.</p>
+        </div>
+        <button>Acción</button>
+      </article>
+
+      <article class="">
+        <div class=""><span>IMG 4</span></div>
+        <div class="">
+          <h3>Producto 4</h3>
+          <p>Descripción corta.</p>
+        </div>
+        <button>Acción</button>
+      </article>
+
+      <!-- (Opcional) más tarjetas -->
+      <article class="">
+        <div class=""><span>IMG 5</span></div>
+        <div class="">
+          <h3>Producto 5</h3>
+          <p>Descripción para probar el wrap en lg.</p>
+        </div>
+        <button>Acción</button>
+      </article>
+
+    </section>
+
+    <!-- Pistas mínimas (no poner las clases exactas):
+         • Section (base): flex-col + gap; md: flex-row flex-nowrap overflow-x-auto; lg: flex-wrap.
+         • Tarjeta: en md usar basis fijo y shrink-0 para estabilidad; estructura interna flex-col justify-between.
+         • Bloque imagen: altura fija (h-36), centrado (flex items-center justify-center), bg neutro.
+         • Botones: color base + hover, padding y rounded. -->
+  </main>
+</body>
+</html>
