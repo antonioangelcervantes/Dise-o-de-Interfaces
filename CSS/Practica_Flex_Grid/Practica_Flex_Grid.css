@@ -1,0 +1,98 @@
+/* =====================================
+   PRÁCTICA FLEX + GRID (Pistas mínimas)
+   Objetivo: Grid para estructura global, Flex para interiores
+   ===================================== */
+
+/* RESET y tipografía base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-family: Arial, Helvetica, sans-serif; line-height: 1.4; }
+img { max-width: 100%; display: block; }
+
+/* Variables de color (opcional) */
+:root{
+  --color-primario: #5c80bc;
+  --color-fondo: #f7f7f7;
+  --color-tarjeta: #e6eef8;
+  --color-texto: #222;
+}
+
+/* ===== LAYOUT GLOBAL (usa GRID) =====
+   PISTA: Aplica display:grid; y define filas para header / contenido / footer.
+   Sugerencia: min-height: 100vh;
+*/
+body{
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  /* TODO: display:grid; grid-template-rows: auto 1fr auto; min-height:100vh; */
+}
+
+/* ===== CABECERA =====
+   PISTA: Usa FLEX para espacio entre el título y el menú.
+   Propiedades a revisar: display:flex; justify-content; align-items; gap;
+*/
+header{
+  background: var(--color-primario);
+  color: #fff;
+  padding: 1rem;
+  /* TODO */
+}
+
+.menu{
+  /* TODO: display:flex; gap:1rem; align-items:center; */
+}
+
+.menu a{
+  color: #fff;
+  text-decoration: none;
+  /* PISTA: añade :hover para feedback visual */
+}
+
+/* ===== CONTENEDOR CENTRAL (GRID 2 columnas) =====
+*/
+.contenedor{
+  padding: 1rem;
+  /* TODO */
+}
+
+/* Sidebar */
+.sidebar{
+  /* PISTA: dale un fondo claro y padding */
+  /* TODO */
+}
+
+/* Principal */
+.principal{
+  /* TODO */
+}
+
+/* ===== GALERÍA (usa FLEX) =====
+   PISTA: display:flex; flex-wrap:wrap; gap:1rem;
+   Controla ancho mínimo con flex-basis o min/max-width.
+*/
+.galeria{
+  /* TODO */
+}
+
+.tarjeta{
+  background: var(--color-tarjeta);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  /* TODO: flex: 1 1 220px; (o estrategia similar) */
+  /* PISTA: centra el texto si quieres */
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background: #111;
+  color: #eee;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== RESPONSIVE (opcional) =====
+   PISTA: usa media queries para ajustar columnas/tarjetas en pantallas pequeñas.
+   Ejemplo orientativo:
+   @media (max-width: 768px){
+     .contenedor{ /* reconfigura columnas */ }
+   }
+*/

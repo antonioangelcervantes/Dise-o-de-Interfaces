@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portafolio – Grid & Flex</title>
+    <link rel="stylesheet" href="Practica_Flex_Grid.css">
+  </head>
+  <body>
+    <!-- Usa GRID para definir el layout global (header, contenedor central, footer) -->
+    <header>
+      <h1>Mi Portafolio</h1>
+      <nav class="menu">
+        <!-- PISTA: distribuye estos enlaces con FLEX (gap, alineación) -->
+        <a href="#">Inicio</a>
+        <a href="#">Proyectos</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- Contenedor central con dos columnas: sidebar + principal (GRID) -->
+    <div class="contenedor">
+      <aside class="sidebar">
+        <h2>Sobre mí</h2>
+        <p>Breve descripción. Añade información de interés.</p>
+      </aside>
+
+      <main class="principal">
+        <section class="galeria">
+          <!-- PISTA: organiza estas tarjetas con FLEX, usa flex-wrap -->
+          <article class="tarjeta">
+          <!--Inserta una imagen a cada tarjeta y aplica las propiedades necesarias-->
+            <img src="proyecto1.jpg" alt="Proyecto 1">
+            <h3>Proyecto 1</h3>
+            <p>Descripción corta.</p>
+          </article>
+          <article class="tarjeta">
+          <!--Inserta una imagen a cada tarjeta y aplica las propiedades necesarias-->    
+            <img src="proyecto2.jpg" alt="Proyecto 2">
+            <h3>Proyecto 2</h3>
+            <p>Descripción corta.</p>
+          </article>
+          <article class="tarjeta">
+          <!--Inserta una imagen a cada tarjeta y aplica las propiedades necesarias-->
+            <img src="proyecto3.jpg" alt="Proyecto 3">
+            <h3>Proyecto 3</h3>
+            <p>Descripción corta.</p>
+          </article>
+          <article class="tarjeta">
+          <!--Inserta una imagen a cada tarjeta y aplica las propiedades necesarias-->  
+            <img src="proyecto4.jpg" alt="Proyecto 4">
+            <h3>Proyecto 4</h3>
+            <p>Descripción corta.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2025 Mi Nombre</p>
+    </footer>
+  </body>
+</html>
