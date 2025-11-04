@@ -1,0 +1,32 @@
+
+/* Ejercicio 1: 2 columnas iguales */
+#galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Ejercicio 2: 3 columnas fijas de 150px */
+#galeria.ej2 {
+  grid-template-columns: 150px 150px 150px;
+}
+
+/* Ejercicio 3: altura mínima de fila */
+#galeria.ej3 {
+  grid-auto-rows: minmax(100px, auto);
+}
+
+/* Ejercicio 4: responsive con auto-fit */
+#galeria.ej4 {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Ejercicio 5: primer destacado ocupa 2 columnas */
+#destacados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+#destacados .card:first-of-type {
+  grid-column: span 2;
+}
