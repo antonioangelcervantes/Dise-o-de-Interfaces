@@ -1,0 +1,135 @@
+/* =============================
+   SOLUCIÓN PROFESOR – FLEX + GRID
+   ============================= */
+
+/* Reset y base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+img { max-width: 100%; display: block; }
+
+:root{
+  --color-primario: #5c80bc;
+  --color-fondo: #f7f7f7;
+  --color-tarjeta: #e6eef8;
+  --color-texto: #222;
+  --color-oscuro: #111;
+}
+
+/* ===== LAYOUT GLOBAL (GRID: filas) =====
+   body en grid para separar header / contenido / footer
+   y asegurar que el footer cae al fondo con min-height
+*/
+body{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* ===== CABECERA (FLEX) =====
+   Alineación horizontal de título y menú
+*/
+header{
+  background: var(--color-primario);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu a{
+  color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.menu a:hover{
+  background: rgba(255,255,255,0.15);
+  text-decoration: none;
+}
+
+/* ===== CONTENEDOR CENTRAL (GRID 2 columnas) ===== */
+.contenedor{
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Sidebar + principal */
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+/* Sidebar con fondo suave y separación */
+.sidebar{
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.sidebar h2{ margin-bottom: 0.5rem; }
+.sidebar ul{ margin-top: 0.5rem; padding-left: 1.25rem; }
+
+/* Principal: columna derecha */
+.principal{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+.intro h2{ margin-bottom: 0.25rem; }
+.intro p{ color: #444; }
+
+/* ===== GALERÍA (FLEX) ===== */
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Tarjetas fluidas con ancho mínimo (crecen/encogen) */
+.tarjeta{
+  background: var(--color-tarjeta);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  flex: 1 1 220px;         /* min ~220px, luego crece hasta llenar */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.tarjeta h3{ margin-bottom: 0.25rem; }
+.tarjeta p{ color: #333; }
+
+/* ===== FOOTER ===== */
+footer{
+  background: var(--color-oscuro);
+  color: #eee;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px){
+  .contenedor{
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (max-width: 768px){
+  /* Una sola columna en móvil */
+  .contenedor{
+    grid-template-columns: 1fr;
+  }
+  /* Menú puede envolver si hay muchos enlaces */
+  .menu{
+    flex-wrap: wrap;
+  }
+}
