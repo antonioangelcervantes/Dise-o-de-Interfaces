@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Portafolio – Tailwind</title>
+</head>
+<body>
+  <!-- CONTENEDOR PRINCIPAL: aplicar márgenes y ancho máximo -->
+  <div>
+    <!-- HEADER: aplicar flex para alinear el título y el menú -->
+    <header>
+      <div>
+        <h1>Mi Portafolio</h1>
+        <nav>
+          <!-- Aplicar flex + espacio entre enlaces -->
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ZONA PRINCIPAL: aplicar grid para dividir en dos columnas -->
+    <div>
+      <!-- ASIDE: aplicar fondo, borde redondeado y espaciado -->
+      <aside>
+        <h2>Sobre mí</h2>
+        <p>Texto de ejemplo sobre el autor o autora del portafolio.</p>
+
+        <h3>Enlaces</h3>
+        <!-- Aplicar lista vertical con espaciado -->
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">CV</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN: aplicar grid o flex para la galería de proyectos -->
+      <main>
+        <h2>Proyectos</h2>
+
+        <!-- Galería de tarjetas -->
+        <section>
+          <article>
+            <!-- Aplicar fondo blanco, borde redondeado y sombra -->
+            <img src="https://picsum.photos/640/360?1" alt="Proyecto 1">
+            <div>
+              <h3>Proyecto 1</h3>
+              <p>Breve descripción del proyecto.</p>
+              <a href="#">Ver más</a>
+            </div>
+          </article>
+
+          <article>
+            <img src="https://picsum.photos/640/360?2" alt="Proyecto 2">
+            <div>
+              <h3>Proyecto 2</h3>
+              <p>Breve descripción del proyecto.</p>
+              <a href="#">Ver más</a>
+            </div>
+          </article>
+
+          <article>
+            <img src="https://picsum.photos/640/360?3" alt="Proyecto 3">
+            <div>
+              <h3>Proyecto 3</h3>
+              <p>Breve descripción del proyecto.</p>
+              <a href="#">Ver más</a>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- FOOTER: centrar texto y añadir separación superior -->
+    <footer>
+      © 2025 – Tu Nombre
+    </footer>
+  </div>
+</body>
+</html>
