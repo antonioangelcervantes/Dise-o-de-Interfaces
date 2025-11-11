@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Portafolio – Solución Tailwind</title>
+  </head>
+  <body class="min-h-dvh bg-slate-50 text-slate-800">
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="max-w-6xl mx-auto p-4 md:p-8">
+      <!-- HEADER -->
+      <header class="mb-8 border-b border-slate-200 pb-4">
+        <div class="flex items-center justify-between gap-4">
+          <h1 class="text-2xl font-bold tracking-tight">Mi Portafolio</h1>
+          <nav aria-label="Principal">
+            <ul class="flex items-center gap-3 md:gap-5">
+              <li>
+                <a
+                  class="px-3 py-1 rounded transition hover:bg-slate-200 focus:outline-none focus:ring focus:ring-slate-300"
+                  href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  class="px-3 py-1 rounded transition hover:bg-slate-200 focus:outline-none focus:ring focus:ring-slate-300"
+                  href="#"
+                  >Proyectos</a
+                >
+              </li>
+              <li>
+                <a
+                  class="px-3 py-1 rounded transition hover:bg-slate-200 focus:outline-none focus:ring focus:ring-slate-300"
+                  href="#"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- LAYOUT PRINCIPAL: 1 col en móviles, 2 col a partir de md -->
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-[260px_1fr]">
+        <!-- ASIDE -->
+        <aside class="bg-white rounded-xl p-5 shadow-sm">
+          <h2 class="text-lg font-semibold mb-2">Sobre mí</h2>
+          <p class="text-sm leading-relaxed text-slate-700">
+            Soy desarrollador/a web con interés en interfaces limpias y
+            accesibles. Aquí comparto una selección de proyectos.
+          </p>
+
+          <h3 class="mt-5 font-medium">Enlaces</h3>
+          <ul class="mt-2 flex flex-col gap-2">
+            <li>
+              <a
+                class="underline underline-offset-2 hover:no-underline focus:outline-none focus:ring focus:ring-slate-300 rounded"
+                href="#"
+                rel="external"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="underline underline-offset-2 hover:no-underline focus:outline-none focus:ring focus:ring-slate-300 rounded"
+                href="#"
+                rel="external"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                class="underline underline-offset-2 hover:no-underline focus:outline-none focus:ring focus:ring-slate-300 rounded"
+                href="#"
+                rel="external"
+                >CV</a
+              >
+            </li>
+          </ul>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="min-h-64">
+          <h2 class="text-xl font-semibold mb-4">Proyectos</h2>
+
+          <!-- Galería: grid fluida auto-fit -->
+          <section
+            class="grid gap-6 grid-cols-[repeat(auto-fit,minmax(16rem,1fr))]"
+          >
+            <!-- TARJETA 1 -->
+            <article
+              class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col transition hover:shadow-md hover:-translate-y-0.5"
+            >
+              <img
+                src="https://picsum.photos/640/360?1"
+                alt="Proyecto 1"
+                class="aspect-video object-cover"
+              />
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-medium">Proyecto 1</h3>
+                <p class="text-sm text-slate-600">
+                  Landing sencilla con sección hero y CTA.
+                </p>
+                <a
+                  class="mt-2 inline-block text-sm font-medium underline underline-offset-2 hover:no-underline focus:outline-none focus:ring focus:ring-slate-300 rounded"
+                  href="#"
+                  >Ver más</a
+                >
+              </div>
+            </article>
+
+            <!-- TARJETA 2 -->
+            <article
+              class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col transition hover:shadow-md hover:-translate-y-0.5"
+            >
+              <img
+                src="https://picsum.photos/640/360?2"
+                alt="Proyecto 2"
+                class="aspect-video object-cover"
+              />
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-medium">Proyecto 2</h3>
+                <p class="text-sm text-slate-600">
+                  Galería responsive con grid y filtros básicos.
+                </p>
+                <a
+                  class="mt-2 inline-block text-sm font-medium underline underline-offset-2 hover:no-underline focus:outline-none focus:ring focus:ring-slate-300 rounded"
+                  href="#"
+                  >Ver más</a
+                >
+              </div>
+            </article>
+
+            <!-- TARJETA 3 -->
+            <article
+              class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col transition hover:shadow-md hover:-translate-y-0.5"
+            >
+              <img
+                src="https://picsum.photos/640/360?3"
+                alt="Proyecto 3"
+                class="aspect-video object-cover"
+              />
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-medium">Proyecto 3</h3>
+                <p class="text-sm text-slate-600">
+                  Perfil de usuario con tarjetas informativas.
+                </p>
+                <a
+                  class="mt-2 inline-block text-sm font-medium underline underline-offset-2 hover:no-underline focus:outline-none focus:ring focus:ring-slate-300 rounded"
+                  href="#"
+                  >Ver más</a
+                >
+              </div>
+            </article>
+
+            <!-- TARJETA 4 -->
+            <article
+              class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col transition hover:shadow-md hover:-translate-y-0.5"
+            >
+              <img
+                src="https://picsum.photos/640/360?4"
+                alt="Proyecto 4"
+                class="aspect-video object-cover"
+              />
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-medium">Proyecto 4</h3>
+                <p class="text-sm text-slate-600">
+                  Dashboard con bloques y métricas simples.
+                </p>
+                <a
+                  class="mt-2 inline-block text-sm font-medium underline underline-offset-2 hover:no-underline focus:outline-none focus:ring focus:ring-slate-300 rounded"
+                  href="#"
+                  >Ver más</a
+                >
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="mt-12 py-6 text-center text-sm text-slate-600 border-t">
+        © 2025 – Antonio Cervantes Galindo
+      </footer>
+    </div>
+  </body>
+</html>

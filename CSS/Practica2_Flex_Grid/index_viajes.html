@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agencia Viajes · Catálogo de Destinos</title>
+  <meta name="description" content="Práctica Flex + Grid: landing sencilla de agencia de viajes con catálogo de destinos.">
+  <link rel="stylesheet" href="style_viajes_solucion.css">
+</head>
+<body>
+  <!-- ============ HEADER (Flex) ============ -->
+  <header class="site-header">
+    <h1 class="brand">ViajaFP</h1>
+    <nav class="main-nav" aria-label="principal">
+      <a href="#" aria-current="page">Inicio</a>
+      <a href="#">Destinos</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO (Grid simple) ============ -->
+  <section class="hero" aria-label="destacado">
+    <!-- PISTA: organiza título y subtítulo en una pequeña rejilla de una columna;
+         centra el contenido en ambos ejes. La imagen de fondo la pone el CSS. -->
+    <h2>Explora, aprende y viaja</h2>
+    <p>Destinos para todos los gustos. Maqueta la página con Flex + Grid.</p>
+  </section>
+
+  <!-- ============ LAYOUT PRINCIPAL (Grid 2 columnas) ============ -->
+  <div class="layout">
+    <!-- ASIDE (bloque lateral) -->
+    <aside class="sidebar" aria-label="filtros">
+      <h2>Filtros</h2>
+      <fieldset>
+        <legend>Continente</legend>
+        <label><input type="checkbox"> Europa</label>
+        <label><input type="checkbox"> Asia</label>
+        <label><input type="checkbox"> América</label>
+      </fieldset>
+      <fieldset>
+        <legend>Tipo</legend>
+        <label><input type="checkbox"> Playa</label>
+        <label><input type="checkbox"> Montaña</label>
+        <label><input type="checkbox"> Ciudad</label>
+      </fieldset>
+    </aside>
+
+    <!-- CONTENIDO (Grid para tarjetas) -->
+    <main class="content" role="main">
+      <h2>Destinos populares</h2>
+
+      <!-- GRID de tarjetas -->
+      <section class="cards" aria-label="catálogo de destinos">
+        <!-- Usa las imágenes suministradas (Picsum con seed estable) -->
+        <article class="card">
+          <img src="https://picsum.photos/seed/bali/800/600" alt="Playa tropical - Bali (imagen de ejemplo)" />
+          <div class="card-body">
+            <h3>Bali</h3>
+            <p class="tag">Playa</p>
+            <button type="button">Ver más</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/alps/800/600" alt="Lago en los Alpes (imagen de ejemplo)" />
+          <div class="card-body">
+            <h3>Alpes</h3>
+            <p class="tag">Montaña</p>
+            <button type="button">Ver más</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/tokyo/800/600" alt="Ciudad de Tokio (imagen de ejemplo)" />
+          <div class="card-body">
+            <h3>Tokio</h3>
+            <p class="tag">Ciudad</p>
+            <button type="button">Ver más</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/sahara/800/600" alt="Dunas del desierto del Sahara (imagen de ejemplo)" />
+          <div class="card-body">
+            <h3>Sahara</h3>
+            <p class="tag">Aventura</p>
+            <button type="button">Ver más</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/rome/800/600" alt="Ciudad de Roma (imagen de ejemplo)" />
+          <div class="card-body">
+            <h3>Roma</h3>
+            <p class="tag">Historia</p>
+            <button type="button">Ver más</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/iguazu/800/600" alt="Cataratas (imagen de ejemplo)" />
+          <div class="card-body">
+            <h3>Iguazú</h3>
+            <p class="tag">Naturaleza</p>
+            <button type="button">Ver más</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <small>© 2025 ViajaFP — Imágenes de ejemplo: Lorem Picsum</small>
+  </footer>
+
+  <!-- ======= NOTAS PARA EL ALUMNADO (BORRAR EN ENTREGA) =======
+      1) Header en Flex (ejemplo completo en la hoja de estilos).
+      2) Hero a pantalla ancha con título centrado (usa Grid para centrar).
+      3) Layout de dos columnas (sidebar + contenido) con Grid en .layout.
+      4) Catálogo en Grid (.cards) + card interna con Flex (.card-body).
+      5) Responsive: a 900px apila layout y revisa columnas de .cards.
+  =============================================================== -->
+</body>
+</html>

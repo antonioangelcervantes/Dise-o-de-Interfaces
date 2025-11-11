@@ -3,39 +3,148 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Minireto – Tira glass (Base)</title>
+  <title>Minireto – Glass Pro</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="/* TODO: fondo con gradiente + tipografía + min-h-screen */">
-  <main class="/* TODO: contenedor centrado (max-w, mx-auto, p-*) */">
-    <header class="/* TODO: separa con mb-*, centra en móvil */">
-      <h1 class="/* TODO: tamaño y peso del título */">Destacados de la semana</h1>
-      <p class="/* TODO: color secundario */">Explora en móvil (snap vertical) y en pantallas medias (snap horizontal).</p>
+<body class="bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 font-sans text-slate-100 min-h-screen flex items-center justify-center px-6 py-12">
+  <main class="max-w-6xl w-full space-y-10 text-white/90">
+    <header class="flex flex-col items-center gap-6 text-center md:flex-row md:items-end md:justify-between md:text-left">
+      <div class="space-y-2">
+        <p class="text-xs uppercase tracking-[0.4em] text-white/60 md:text-sm">Explora</p>
+        <h1 class="text-3xl font-semibold drop-shadow-lg sm:text-4xl md:text-5xl">Destacados premium</h1>
+      </div>
+      <div class="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-lg shadow-lg shadow-black/20">
+        <label class="text-xs uppercase tracking-wide text-white/60" for="filtro">Filtro</label>
+        <select id="filtro" class="appearance-none bg-transparent text-sm text-white focus:outline-none">
+          <option value="">Todos</option>
+          <option value="video">Video</option>
+          <option value="live">Live</option>
+          <option value="workshop">Workshop</option>
+        </select>
+      </div>
     </header>
 
-    <!-- Contenedor de tarjetas con scroll-snap -->
-    <!-- Base: columna + overflow-y-auto + snap-y + snap-mandatory -->
-    <!-- md: fila + overflow-x-auto + snap-x -->
-    <!-- lg: wrap + overflow visible -->
-    <section class="/* TODO */" style="height: /* TODO: */">
-      
-      <!-- Tarjeta (duplica 3–5 veces) -->
-      <article class="/* TODO */">
+    <section class="grid h-[520px] grid-cols-1 gap-6 overflow-y-auto snap-y snap-mandatory md:h-auto md:grid-cols-[minmax(220px,280px)_1fr] md:overflow-visible lg:grid-cols-[260px_1fr]">
+      <aside class="sticky top-6 flex h-fit flex-col gap-6 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-lg shadow-black/20">
         <div>
-          <h3 class="/* TODO: título */">Curso Tailwind Pro</h3>
-          <p class="/* TODO: texto secundario */">Maqueta rápido con utilidades y patrones modernos.</p>
+          <p class="text-xs uppercase tracking-wide text-white/60">Progreso mensual</p>
+          <h2 class="text-3xl font-semibold text-white">68%</h2>
         </div>
-        <div class="/* TODO: badges con flex flex-wrap gap-2 mt-* */">
-          <span class="/* TODO: */">Flex</span>
-          <span class="/* TODO */">Scroll-snap</span>
-          <span class="/* TODO */">Gradient</span>
+        <div class="grid gap-4">
+          <article class="flex items-center justify-between rounded-2xl border border-white/10 bg-gradient-to-r from-white/15 to-white/5 px-4 py-3">
+            <span class="text-sm text-white/70">Horas invertidas</span>
+            <strong class="text-lg font-semibold text-white">42</strong>
+          </article>
+          <article class="flex items-center justify-between rounded-2xl border border-white/10 bg-gradient-to-r from-white/15 to-white/5 px-4 py-3">
+            <span class="text-sm text-white/70">Proyectos activos</span>
+            <strong class="text-lg font-semibold text-white">8</strong>
+          </article>
+          <article class="flex items-center justify-between rounded-2xl border border-white/10 bg-gradient-to-r from-white/15 to-white/5 px-4 py-3">
+            <span class="text-sm text-white/70">Satisfacción</span>
+            <strong class="text-lg font-semibold text-white">92%</strong>
+          </article>
         </div>
-        <button class="/* TODO/">Empezar</button>
-      </article>
+        <button class="group inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500/70 via-indigo-500/70 to-purple-500/70 p-[1px] text-sm font-semibold text-white transition hover:shadow-lg hover:shadow-indigo-500/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+          <span class="rounded-full bg-slate-950/70 px-6 py-2 transition-colors group-hover:bg-slate-900/60">Ver dashboard</span>
+        </button>
+      </aside>
 
-      <article class="/* TODO */">…</article>
-      <article class="/* TODO */">…</article>
-      <article class="/* TODO */">…</article>
+      <div class="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 pr-4 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:snap-none md:pb-0 md:pr-0 lg:grid-cols-3">
+        <article class="snap-center w-[280px] shrink-0 space-y-6 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/20 hover:shadow-2xl hover:shadow-indigo-500/20 md:w-auto md:snap-align-none">
+          <header class="flex items-center gap-4">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 text-lg font-semibold text-white">UI</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Curso Tailwind Pro</h3>
+              <p class="text-sm text-white/60">Maqueta interfaces realistas con glassmorphism.</p>
+            </div>
+          </header>
+          <ul class="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-white/70">
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">✨ Animaciones</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">🎯 UX</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">📱 Responsive</li>
+          </ul>
+          <footer class="flex items-center justify-between">
+            <span class="text-sm text-white/70">12 lecciones</span>
+            <button class="rounded-full border border-white/30 px-4 py-2 text-sm text-white/80 transition hover:border-white/60 hover:text-white">Empezar</button>
+          </footer>
+        </article>
+
+        <article class="snap-center w-[280px] shrink-0 space-y-6 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/20 hover:shadow-2xl hover:shadow-indigo-500/20 md:w-auto md:snap-align-none">
+          <header class="flex items-center gap-4">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-lg font-semibold text-white">UX</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Workshop Live</h3>
+              <p class="text-sm text-white/60">Sesión colaborativa centrada en accesibilidad.</p>
+            </div>
+          </header>
+          <ul class="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-white/70">
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">♿ Accesible</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">🤝 Pairing</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">🧪 Testing</li>
+          </ul>
+          <footer class="flex items-center justify-between">
+            <span class="text-sm text-white/70">Evento en vivo</span>
+            <button class="rounded-full border border-white/30 px-4 py-2 text-sm text-white/80 transition hover:border-white/60 hover:text-white">Reserva</button>
+          </footer>
+        </article>
+
+        <article class="snap-center w-[280px] shrink-0 space-y-6 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/20 hover:shadow-2xl hover:shadow-indigo-500/20 md:w-auto md:snap-align-none">
+          <header class="flex items-center gap-4">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-orange-600 text-lg font-semibold text-white">3D</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Motion Kit</h3>
+              <p class="text-sm text-white/60">Plantillas animadas listas para exportar.</p>
+            </div>
+          </header>
+          <ul class="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-white/70">
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">🌀 Motion</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">🎬 Export</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">💡 Ideas</li>
+          </ul>
+          <footer class="flex items-center justify-between">
+            <span class="text-sm text-white/70">Incluye presets</span>
+            <button class="rounded-full border border-white/30 px-4 py-2 text-sm text-white/80 transition hover:border-white/60 hover:text-white">Descargar</button>
+          </footer>
+        </article>
+
+        <article class="snap-center w-[280px] shrink-0 space-y-6 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/20 hover:shadow-2xl hover:shadow-indigo-500/20 md:w-auto md:snap-align-none">
+          <header class="flex items-center gap-4">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-fuchsia-600 text-lg font-semibold text-white">IA</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Prompt Lab</h3>
+              <p class="text-sm text-white/60">Optimiza prompts para generar UI en segundos.</p>
+            </div>
+          </header>
+          <ul class="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-white/70">
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">🤖 AI</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">⚡ Speed</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">📊 Data</li>
+          </ul>
+          <footer class="flex items-center justify-between">
+            <span class="text-sm text-white/70">Guía descargable</span>
+            <button class="rounded-full border border-white/30 px-4 py-2 text-sm text-white/80 transition hover:border-white/60 hover:text-white">Explorar</button>
+          </footer>
+        </article>
+
+        <article class="snap-center w-[280px] shrink-0 space-y-6 rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-2xl transition-all duration-300 hover:-translate-y-2 hover:bg-white/20 hover:shadow-2xl hover:shadow-indigo-500/20 md:w-auto md:snap-align-none">
+          <header class="flex items-center gap-4">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 text-lg font-semibold text-white">AR</div>
+            <div>
+              <h3 class="text-xl font-semibold text-white">Experiencias XR</h3>
+              <p class="text-sm text-white/60">Integra realidades mixtas con patrones nativos.</p>
+            </div>
+          </header>
+          <ul class="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-white/70">
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">🧭 Guiado</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">🌐 AR</li>
+            <li class="flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white/80">⚙️ Setup</li>
+          </ul>
+          <footer class="flex items-center justify-between">
+            <span class="text-sm text-white/70">3 módulos</span>
+            <button class="rounded-full border border-white/30 px-4 py-2 text-sm text-white/80 transition hover:border-white/60 hover:text-white">Unirme</button>
+          </footer>
+        </article>
+      </div>
     </section>
   </main>
 </body>
