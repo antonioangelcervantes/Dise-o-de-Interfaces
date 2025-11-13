@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agencia Viajes · Práctica Tailwind CSS</title>
+    <meta
+      name="description"
+      content="Práctica Tailwind CSS: landing de agencia de viajes con Grid y Flexbox."
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              system: [
+                "system-ui",
+                "-apple-system",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica",
+                "Arial",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <!-- 
+============================================================
+  PRÁCTICA TAILWIND CSS — Agencia de Viajes
+  INSTRUCCIONES PARA EL ALUMNADO
+============================================================
+
+IMPORTANTE: Este archivo te guía paso a paso para crear el layout usando Tailwind CSS.
+Consulta la documentación oficial: https://tailwindcss.com/docs
+
+PISTAS GENERALES:
+- Grid: usa 'grid', 'grid-cols-*', 'grid-rows-*'
+- Flexbox: usa 'flex', 'items-*', 'justify-*'
+- Colores: 'bg-*', 'text-*' (ej: bg-sky-500, text-white)
+- Espaciado: 'p-*', 'm-*', 'gap-*'
+- Responsive: 'sm:', 'md:', 'lg:', 'xl:'
+-->
+
+  <body
+    class="/* TAREA 1: LAYOUT BASE DEL DOCUMENTO Objetivo: Footer siempre abajo usando Grid en el body PISTAS: - Altura mínima: min-h-screen - Grid con 3 filas: header (auto), contenido (flexible), footer (auto) - Tipografía del sistema: font-system - Fondo: bg-slate-50 - Color de texto: text-gray-800 BUSCA EN DOCS: 'grid-template-rows' equivalente en Tailwind RESPUESTA: grid grid-rows-[auto_1fr_auto] min-h-screen font-system bg-slate-50 text-gray-800 */"
+  >
+    <!-- ============ HEADER (Ejemplo completo con Flexbox) ============ -->
+    <header
+      class="bg-sky-500 text-white px-4 py-3 flex items-center justify-between"
+    >
+      <h1 class="font-extrabold tracking-wide">ViajaFP</h1>
+      <nav class="flex gap-3" aria-label="principal">
+        <a
+          href="#"
+          aria-current="page"
+          class="text-white no-underline px-2 py-1 rounded bg-white/20"
+          >Inicio</a
+        >
+        <a
+          href="#"
+          class="text-white no-underline px-2 py-1 rounded hover:bg-white/10"
+          >Destinos</a
+        >
+        <a
+          href="#"
+          class="text-white no-underline px-2 py-1 rounded hover:bg-white/10"
+          >Contacto</a
+        >
+      </nav>
+    </header>
+
+    <!-- 
+  ============ HERO SECTION ============
+  TAREA 2: HERO CON IMAGEN DE FONDO Y CONTENIDO CENTRADO
+  
+  Objetivos:
+  - Altura mínima de 40% del viewport
+  - Centrar contenido en ambos ejes usando Grid
+  - Imagen de fondo con overlay oscuro
+  - Texto blanco y centrado
+  
+  PISTAS:
+  - Altura mínima: min-h-[40vh]
+  - Centrado con Grid: grid place-items-center
+  - Color de texto: text-white
+  - Alineación de texto: text-center
+  - Padding: px-4 py-8
+  
+  IMAGEN DE FONDO (usar style="" por la URL):
+  style="background-image: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.35)), url('https://picsum.photos/seed/hero/1600/900'); background-size: cover; background-position: center;"
+  -->
+    <section
+      class="/* COMPLETA AQUÍ LAS CLASES DEL HERO */"
+      style="
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+          ),
+          url('https://picsum.photos/seed/hero/1600/900');
+        background-size: cover;
+        background-position: center;
+      "
+      aria-label="destacado"
+    >
+      <div class="/* PISTA: contenedor para el contenido con gap-2 */">
+        <h2 class="/* PISTA: texto grande y negrita */">
+          Explora, aprende y viaja
+        </h2>
+        <p class="/* PISTA: texto mediano */">
+          Destinos para todos los gustos. Maqueta la página con Tailwind CSS.
+        </p>
+      </div>
+    </section>
+
+    <!-- 
+  ============ LAYOUT PRINCIPAL ============
+  TAREA 3: GRID DE 2 COLUMNAS (SIDEBAR + CONTENIDO)
+  
+  Objetivos:
+  - En móvil: 1 columna
+  - En desktop (lg): 2 columnas
+  - Gap entre columnas
+  - Padding general
+  
+  PISTAS:
+  - Grid básico
+  - Responsive
+  - Espaciado
+  
+  BUSCA EN DOCS: 'arbitrary values' en Tailwind (valores entre [])
+  -->
+    <div class="/* COMPLETA AQUÍ EL LAYOUT GRID */">
+      <!-- 
+    ============ SIDEBAR ============
+    TAREA 4: BARRA LATERAL DE FILTROS
+    
+    Objetivos:
+    - Fondo blanco con borde gris claro
+    - Bordes redondeados
+    - Padding interno
+    
+    PISTAS:
+    - Fondo: bg-white
+    - Borde: border border-gray-200
+    - Redondeo: rounded-lg
+    - Padding: p-4
+    -->
+      <aside class="/* COMPLETA AQUÍ EL SIDEBAR */" aria-label="filtros">
+        <h2 class="text-lg font-semibold mb-4">Filtros</h2>
+
+        <!-- Los fieldset mantienen algunas clases específicas -->
+        <fieldset class="border-0 m-0 mb-3 p-0">
+          <legend class="font-semibold mb-1">Continente</legend>
+          <label class="flex items-center gap-2 py-1"
+            ><input type="checkbox" /> Europa</label
+          >
+          <label class="flex items-center gap-2 py-1"
+            ><input type="checkbox" /> Asia</label
+          >
+          <label class="flex items-center gap-2 py-1"
+            ><input type="checkbox" /> América</label
+          >
+        </fieldset>
+        <fieldset class="border-0 m-0 mb-3 p-0">
+          <legend class="font-semibold mb-1">Tipo</legend>
+          <label class="flex items-center gap-2 py-1"
+            ><input type="checkbox" /> Playa</label
+          >
+          <label class="flex items-center gap-2 py-1"
+            ><input type="checkbox" /> Montaña</label
+          >
+          <label class="flex items-center gap-2 py-1"
+            ><input type="checkbox" /> Ciudad</label
+          >
+        </fieldset>
+      </aside>
+
+      <!-- 
+    ============ CONTENIDO PRINCIPAL ============
+    TAREA 5: ÁREA DE CONTENIDO CON GRID DE TARJETAS
+    -->
+      <main role="main">
+        <h2 class="m-0 mb-2 text-xl font-semibold">Destinos populares</h2>
+
+        <!-- 
+      TAREA 6: GRID DE TARJETAS RESPONSIVE
+      
+      Objetivos:
+      - Grid que se adapte automáticamente
+      - Tarjetas mínimo 220px, máximo 1fr
+      - Gap entre tarjetas
+      
+      PISTAS:
+      - Grid básico: grid
+      - Espaciado: gap-4
+      - Columnas auto-adaptables
+      
+      BUSCA EN DOCS: 'CSS Grid' en Tailwind, sección 'Arbitrary values'
+      -->
+        <section
+          class="/* COMPLETA AQUÍ EL GRID DE TARJETAS */"
+          aria-label="catálogo de destinos"
+        >
+          <!-- 
+        TAREA 7: COMPONENTE CARD
+        
+        Objetivos para cada tarjeta:
+        - Fondo blanco con borde
+        - Bordes redondeados
+        - Ocultar contenido que sobresale (overflow)
+        
+        Objetivos para .card-body:
+        - Flexbox en columna
+        - Gap entre elementos
+        - Padding interno
+        
+        PISTAS CARD:
+        - Fondo y borde: bg-white border border-gray-200
+        - Redondeo: rounded-lg
+        - Overflow: overflow-hidden
+        
+        PISTAS CARD-BODY:
+        - Flexbox
+        - Gap: gap-2
+        - Padding: p-3
+        
+        PISTAS IMAGEN:
+        - Ancho completo
+        - Altura fija
+        - Ajuste
+        
+        PISTAS TAG:
+        - Color: text-emerald-800 font-bold
+        
+        PISTAS BOTÓN:
+        - Padding: px-3 py-2
+        - Borde: border border-slate-300
+        - Fondo: bg-slate-100
+        - Redondeo: rounded-lg
+        - Hover: hover:bg-slate-200
+        - Transición: transition-colors
+        -->
+          <article class="/* COMPLETA AQUÍ LA CARD */">
+            <img
+              src="https://picsum.photos/seed/bali/800/600"
+              alt="Playa tropical - Bali"
+              class="/* COMPLETA AQUÍ LA IMAGEN */"
+            />
+            <div class="/* COMPLETA AQUÍ CARD-BODY */">
+              <h3 class="font-semibold">Bali</h3>
+              <p class="/* COMPLETA AQUÍ EL TAG */">Playa</p>
+              <button type="button" class="/* COMPLETA AQUÍ EL BOTÓN */">
+                Ver más
+              </button>
+            </div>
+          </article>
+
+          <!-- REPITE EL PATRÓN PARA LAS DEMÁS TARJETAS -->
+          <article class="/* COPIA LAS CLASES DE LA TARJETA ANTERIOR */">
+            <img
+              src="https://picsum.photos/seed/alps/800/600"
+              alt="Lago en los Alpes"
+              class="/* COPIA LAS CLASES DE LA IMAGEN */"
+            />
+            <div class="/* COPIA LAS CLASES DE CARD-BODY */">
+              <h3 class="font-semibold">Alpes</h3>
+              <p class="/* COPIA LAS CLASES DEL TAG */">Montaña</p>
+              <button type="button" class="/* COPIA LAS CLASES DEL BOTÓN */">
+                Ver más
+              </button>
+            </div>
+          </article>
+
+          <article class="/* COPIA LAS CLASES DE LA TARJETA */">
+            <img
+              src="https://picsum.photos/seed/tokyo/800/600"
+              alt="Ciudad de Tokio"
+              class="/* COPIA LAS CLASES DE LA IMAGEN */"
+            />
+            <div class="/* COPIA LAS CLASES DE CARD-BODY */">
+              <h3 class="font-semibold">Tokio</h3>
+              <p class="/* COPIA LAS CLASES DEL TAG */">Ciudad</p>
+              <button type="button" class="/* COPIA LAS CLASES DEL BOTÓN */">
+                Ver más
+              </button>
+            </div>
+          </article>
+
+          <article class="/* COPIA LAS CLASES DE LA TARJETA */">
+            <img
+              src="https://picsum.photos/seed/sahara/800/600"
+              alt="Dunas del desierto del Sahara"
+              class="/* COPIA LAS CLASES DE LA IMAGEN */"
+            />
+            <div class="/* COPIA LAS CLASES DE CARD-BODY */">
+              <h3 class="font-semibold">Sahara</h3>
+              <p class="/* COPIA LAS CLASES DEL TAG */">Aventura</p>
+              <button type="button" class="/* COPIA LAS CLASES DEL BOTÓN */">
+                Ver más
+              </button>
+            </div>
+          </article>
+
+          <article class="/* COPIA LAS CLASES DE LA TARJETA */">
+            <img
+              src="https://picsum.photos/seed/rome/800/600"
+              alt="Ciudad de Roma"
+              class="/* COPIA LAS CLASES DE LA IMAGEN */"
+            />
+            <div class="/* COPIA LAS CLASES DE CARD-BODY */">
+              <h3 class="font-semibold">Roma</h3>
+              <p class="/* COPIA LAS CLASES DEL TAG */">Historia</p>
+              <button type="button" class="/* COPIA LAS CLASES DEL BOTÓN */">
+                Ver más
+              </button>
+            </div>
+          </article>
+
+          <article class="/* COPIA LAS CLASES DE LA TARJETA */">
+            <img
+              src="https://picsum.photos/seed/iguazu/800/600"
+              alt="Cataratas"
+              class="/* COPIA LAS CLASES DE LA IMAGEN */"
+            />
+            <div class="/* COPIA LAS CLASES DE CARD-BODY */">
+              <h3 class="font-semibold">Iguazú</h3>
+              <p class="/* COPIA LAS CLASES DEL TAG */">Naturaleza</p>
+              <button type="button" class="/* COPIA LAS CLASES DEL BOTÓN */">
+                Ver más
+              </button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- 
+  ============ FOOTER ============
+  TAREA 8: PIE DE PÁGINA
+  
+  Objetivos:
+  - Fondo oscuro
+  - Texto claro
+  - Centrado
+  - Padding
+  - Texto pequeño
+  
+  PISTAS:
+  - Fondo: bg-slate-900
+  - Texto: text-slate-200
+  - Centrado: text-center
+  - Padding: p-4
+  - Tamaño: text-sm
+  -->
+    <footer class="/* COMPLETA AQUÍ EL FOOTER */">
+      <small>© 2025 ViajaFP — Imágenes de ejemplo: Lorem Picsum</small>
+    </footer>
+  </body>
+</html>
+
+<!-- 
+============================================================
+  RECURSOS ADICIONALES PARA CONSULTAR
+============================================================
+
+📚 DOCUMENTACIÓN OFICIAL: https://tailwindcss.com/docs
+
+🔍 SECCIONES IMPORTANTES A REVISAR:
+
+1. Layout - Grid: https://tailwindcss.com/docs/grid-template-columns
+2. Layout - Flexbox: https://tailwindcss.com/docs/flex
+3. Spacing: https://tailwindcss.com/docs/padding
+4. Colors: https://tailwindcss.com/docs/background-color
+5. Responsive Design: https://tailwindcss.com/docs/responsive-design
+6. Arbitrary Values: https://tailwindcss.com/docs/adding-custom-styles#arbitrary-values
+
+💡 CONSEJOS:
+- Usa el inspector del navegador para verificar que las clases se aplican
+- Si una clase no funciona, revisa la sintaxis en la documentación
+- Los valores arbitrarios van entre corchetes: [280px], [40vh], etc.
+- Para responsive, usa prefijos: lg:grid-cols-2, md:text-lg, etc.
+
+🎯 ORDEN RECOMENDADO:
+1. Completa el body (layout base)
+2. Trabaja en el hero section
+3. Implementa el layout principal (grid 2 columnas)
+4. Estiliza el sidebar
+5. Crea el grid de tarjetas
+6. Diseña las cards individuales
+7. Finaliza con el footer
+
+¡Buena suerte! 🚀
+============================================================ -->
