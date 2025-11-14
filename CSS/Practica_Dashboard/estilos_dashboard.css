@@ -1,0 +1,144 @@
+/* Archivo base para la práctica de Dashboard Responsivo con Flex y Grid */
+
+body {
+    background: #f4f6fa;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: #222;
+    margin: 0;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    background: #252743;
+    color: #fff;
+    width: 220px; /* puedes ajustar este valor */
+    min-height: 100vh;
+    /* Pista: utiliza display:flex o display:grid aquí */
+}
+
+.sidebar ul {
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #31345a;
+    cursor: pointer;
+    /* Sugerencia: agrega una transición suave */
+    transition: ;
+}
+
+.sidebar li:hover {
+    background: #373968;
+}
+
+/* --- Header superior --- */
+/* Pista: Para distribuir los elementos del header horizontalmente usando Flexbox,
+puedes aplicar propiedades como display, align-items y justify-content.
+Completa aquí según lo que necesites
+*/
+.header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(40,40,80,0.06);
+    height: 64px;
+    padding: 0 32px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.search-bar input[type="search"] {
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1em;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar {
+    font-size: 1.6em;
+}
+
+/* --- Main Content --- */
+.main-content {
+    margin-left: 220px; /* ajusta si cambias el ancho del sidebar */
+    padding: 40px 28px;
+}
+
+/* --- Tarjetas de estadísticas --- */
+/* Pista: Utiliza Grid/Flex para varias columnas en escritorio */
+.stats-cards {
+ /* Pista: Utiliza display grid o flex en .stats-cards para colocar las tarjetas en varias columnas en escritorio. 
+Recuerda ajustar el número de columnas, el espacio entre ellas y la distancia respecto al contenido siguiente. 
+Investiga cómo lograr cambios de disposición en versión móvil con media queries. */
+}
+
+/* --- Cada tarjeta individual --- */
+/* Pista: Aplica a cada tarjeta un fondo diferenciado, bordes redondeados, y sombra para simular que está “elevada” sobre el fondo. Centra el contenido dentro de la tarjeta. Añade un efecto visual al pasar el puntero sobre la tarjeta, como sombra, escala o cambio de color. Investiga y aplica las propiedades CSS que consiguen estos resultados. */
+.card {
+    /* El alumno debe escribir aquí las propiedades CSS necesarias */
+}
+
+/* --- Tabla de datos --- */
+.data-table h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 10px rgba(50,70,90,0.10);
+}
+
+.data-table thead {
+    background: #e6eaf8;
+}
+
+.data-table th, .data-table td {
+    padding: 16px 12px;
+    text-align: left;
+}
+
+.data-table tbody tr {
+    /* Pista: Aquí puedes añadir transición y color para hover */
+    transition: background 0.13s;
+}
+
+.data-table tbody tr:hover {
+    background: #f1f5fd;
+}
+
+/* --- Responsive: menú lateral y contenido en pantallas pequeñas --- */
+/* Pista: Usa @media para adaptar el dashboard a pantallas pequeñas.
+Coloca el sidebar arriba o colapsado. Haz que el contenido ocupe todo el ancho disponible.
+En la zona de tarjetas, pon solo una columna y reduce los espacios. El alumno debe buscar las fórmulas CSS para aplicar estos cambios.
+*/
+@media (max-width: 900px) {
+    .sidebar {
+        /* Pista: Haz el sidebar en la parte superior o colapsado, o usa display:none para simular oculto */
+       /* Pista: En pantallas pequeñas, reajusta el ancho y la altura mínima del sidebar para que se adapte correctamente. 
+También puedes modificar su posición respecto al resto del layout. Investiga qué propiedades ayudan a conseguir este efecto. */
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 18px 6px;
+    }
+    .stats-cards {
+        /* Pista: Haz que las tarjetas pasen a una sola columna y reduce el espacio entre tarjetas en móvil */
+    }
+}
+
+/* Puedes seguir agregando más propiedades, efectos y pistas en cada sección según el avance de la práctica.
+No está todo resuelto: hay margen para que el alumno complemente y personalice el resultado final. */

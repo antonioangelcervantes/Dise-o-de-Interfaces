@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Practica CSS</title>
+    <link rel="stylesheet" href="estilos_dashboar.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <!-- Menú lateral -->
+        <ul>
+            <li>
+                <!-- Icono puede ser un SVG, Emoji, etc. -->
+                <span>🏠</span>
+                <span class="section-title">Inicio</span>
+            </li>
+            <li>
+                <span>📊</span>
+                <span class="section-title">Estadísticas</span>
+            </li>
+            <li>
+                <span>👥</span>
+                <span class="section-title">Usuarios</span>
+            </li>
+            <!-- Añade más secciones si lo deseas -->
+        </ul>
+    </nav>
+
+    <header class="header">
+        <!-- Barra superior -->
+        <form class="search-bar" action="#" method="get">
+            <input type="search" placeholder="Buscar...">
+        </form>
+        <div class="user-info">
+            <!-- Avatar ficticio (puede cambiarse por imagen real) -->
+            <span class="avatar">🧑</span>
+            <span class="username">Usuario</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="stats-cards">
+            <!-- Tarjetas de estadísticas -->
+            <div class="card">
+                <h3>Usuarios</h3>
+                <p>235</p>
+            </div>
+            <div class="card">
+                <h3>Ventas</h3>
+                <p>123</p>
+            </div>
+            <div class="card">
+                <h3>Visitas</h3>
+                <p>5,412</p>
+            </div>
+            <!-- Puedes añadir más tarjetas -->
+        </section>
+
+        <section class="data-table">
+            <h2>Lista de Usuarios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>juan@example.com</td>
+                        <td>Admin</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Ruiz</td>
+                        <td>ana@example.com</td>
+                        <td>Editor</td>
+                    </tr>
+                    <tr>
+                        <td>Mario López</td>
+                        <td>mario@example.com</td>
+                        <td>Usuario</td>
+                    </tr>
+                    <tr>
+                        <td>Lucía Torres</td>
+                        <td>lucia@example.com</td>
+                        <td>Usuario</td>
+                    </tr>
+                    <!-- Más filas ficticias si se desean -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
