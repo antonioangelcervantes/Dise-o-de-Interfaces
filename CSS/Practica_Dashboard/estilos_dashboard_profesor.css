@@ -1,0 +1,163 @@
+/* Solución completa de estilos para el Dashboard Responsivo con Flex y Grid */
+
+/* --- Estilos generales --- */
+body {
+  background: #f4f6fa;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #222;
+  margin: 0;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  background: #252743;
+  color: #fff;
+  width: 220px;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebar li {
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #31345a;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar li:hover {
+  background: #373968;
+}
+
+/* --- Header superior --- */
+.header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(40, 40, 80, 0.06);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  position: fixed;
+  left: 220px;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.search-bar input[type="search"] {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1em;
+  min-width: 150px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avatar {
+  font-size: 1.6em;
+}
+
+/* --- Main Content --- */
+.main-content {
+  margin-left: 220px;
+  margin-top: 72px;
+  padding: 32px 16px;
+}
+
+/* --- Tarjetas de estadísticas --- */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(60, 60, 90, 0.07);
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(60, 60, 120, 0.12);
+}
+
+/* --- Tabla de datos --- */
+.data-table h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(50, 60, 90, 0.08);
+}
+.data-table thead {
+  background: #e6eaf8;
+}
+.data-table th,
+.data-table td {
+  padding: 14px 12px;
+  text-align: left;
+}
+.data-table tbody tr {
+  transition: background 0.13s;
+}
+.data-table tbody tr:hover {
+    background: #fafdff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .sidebar {
+        position: static;
+        width: 100vw;
+        min-height: 0;
+        flex-direction: row;
+        border-bottom: 1px solid #31345a;
+    }
+    .header {
+        left: 0;
+        right: 0;
+    }
+    .main-content {
+        margin-left: 0;
+        margin-top: 72px;
+        padding: 18px 6px;
+    }
+    .stats-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}/* --- Responsive para dispositivos móviles --- */
+@media (max-width: 600px) {
+  .header,
+  .main-content {
+    padding: 8px 2px;
+  }
+  .card {
+    padding: 16px 8px;
+  }
+  .data-table th,
+  .data-table td {
+    padding: 8px 4px;
+  }
+}
