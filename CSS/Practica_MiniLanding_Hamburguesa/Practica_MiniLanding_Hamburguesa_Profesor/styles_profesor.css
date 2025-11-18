@@ -1,0 +1,209 @@
+/* -------------------------------------------------- */
+/* RESET BÁSICO                                       */
+/* -------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  color: #222;
+
+  /* Para que el footer quede siempre abajo */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Contenedor reutilizable para centrar contenido y limitar ancho */
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------- */
+/* HEADER                                             */
+/* -------------------------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: white;
+
+  /* Header pegado arriba al hacer scroll */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  /* Sombra suave para sensación de barra flotante */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Botón hamburguesa visible por defecto (móvil) */
+.btn-menu {
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* -------------------------------------------------- */
+/* NAVEGACIÓN (MÓVIL POR DEFECTO)                     */
+/* -------------------------------------------------- */
+
+/* Ocultamos el menú inicialmente en móvil */
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #ffffff;
+  padding: 1rem 0;
+}
+
+/* Clase que activa el menú en móvil (JS la añade/quita) */
+nav.activo {
+  display: flex;
+}
+
+/* Enlaces del menú */
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.3rem 0;
+  padding-left: 0.2rem;
+}
+
+nav a:hover {
+  color: #0077ff;
+}
+
+/* -------------------------------------------------- */
+/* HERO                                               */
+/* -------------------------------------------------- */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #0077ff, #00c2ff);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: white;
+  color: #0077ff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: #e5e5e5;
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------------------- */
+/* SECCIONES GENERALES                                */
+/* -------------------------------------------------- */
+.bloque {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: #fdfdfd;
+}
+
+.bloque:nth-of-type(even) {
+  background-color: #f0f4ff;
+}
+
+.bloque h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.bloque p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.bloque ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bloque li {
+  margin-bottom: 0.5rem;
+}
+
+/* -------------------------------------------------- */
+/* FOOTER                                             */
+/* -------------------------------------------------- */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #eaeaea;
+  color: #555;
+}
+
+/* -------------------------------------------------- */
+/* RESPONSIVE: TABLET Y ESCRITORIO                    */
+/* -------------------------------------------------- */
+@media (min-width: 768px) {
+  /* Menú visible siempre en escritorio */
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background: none;
+    padding: 0;
+  }
+
+  /* Ocultamos el botón hamburguesa en escritorio */
+  .btn-menu {
+    display: none;
+  }
+
+  .hero {
+    padding: 5rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .bloque {
+    padding: 4rem 1.5rem;
+  }
+}
