@@ -107,7 +107,3 @@ Entrega estos archivos:
 	•	Animar la apertura del menú (con transition de Tailwind).
 	•	Cambiar el gradiente por uno personalizado.
 	•	Añadir un pequeño efecto hover al menú móvil.
-
-⸻
-
-Si quieres que te genere también un README versión profesor (con la solución explicada), me lo dices y lo preparo.
