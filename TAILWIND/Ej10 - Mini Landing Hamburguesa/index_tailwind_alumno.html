@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiLanding – Tailwind (Alumno)</title>
+
+  <!-- Tailwind vía navegador -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <!-- PISTA:
+       - Aplica aquí clases globales: fuente sin serifa, color de fondo gris claro,
+         color de texto oscuro, altura mínima pantalla, etc. -->
+
+  <!-- CABECERA FIJA -->
+  <!-- PISTA:
+       - La cabecera debe quedar fija arriba.
+       - Fondo blanco, una ligera sombra y por encima del contenido (z-index).
+       - Dentro, un contenedor centrado con el logo a la izquierda y el menú a la derecha. -->
+  <header>
+    <div>
+      <div>MiLanding</div>
+
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <!-- PISTA:
+           - En móvil el menú debe empezar oculto.
+           - A partir de 768px debe verse siempre en horizontal.
+           - Usa una clase de Tailwind que permita ocultar/mostrar el menú desde JS. -->
+      <nav id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#sobre">Sobre nosotros</a>
+      </nav>
+
+      <!-- BOTÓN HAMBURGUESA -->
+      <!-- PISTA:
+           - Visible en móvil, oculto en escritorio.
+           - Alineado a la derecha.
+           - Tamaño de icono algo más grande que el texto normal. -->
+      <button class="btn-menu" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECCIÓN INICIO / HERO -->
+    <!-- PISTA:
+         - Fondo con un gradiente azul.
+         - Contenido centrado (vertical y horizontalmente) dentro del contenedor.
+         - Texto en blanco.
+         - Botón con fondo blanco, texto azul y bordes redondeados. -->
+    <section id="inicio">
+      <div>
+        <h1>MiLanding</h1>
+        <p>
+          Mini landing responsive con menú hamburguesa para practicar Tailwind,
+          maquetación y un poco de JavaScript.
+        </p>
+
+        <a href="#caracteristicas">
+          Ver características
+        </a>
+      </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS PRINCIPALES -->
+    <!-- PISTA:
+         - Fondo gris muy claro.
+         - Todo centrado y con ancho máximo para que el texto no sea demasiado largo.
+         - Títulos grandes y con más peso. -->
+    <section id="caracteristicas">
+      <div>
+        <h2>Características principales</h2>
+        <p>
+          Esta mini web incluye maquetación responsive, cabecera fija,
+          menú adaptable a móvil y un pequeño comportamiento con JavaScript.
+        </p>
+
+        <ul>
+          <li>Diseño mobile first</li>
+          <li>Menú hamburguesa en móviles</li>
+          <li>HTML semántico y estructura clara</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SOBRE ESTE PROYECTO -->
+    <!-- PISTA:
+         - Fondo blanco.
+         - Misma idea que la sección anterior: texto centrado, ancho máximo cómodo,
+           márgenes generosos arriba y abajo. -->
+    <section id="sobre">
+      <div>
+        <h2>Sobre este proyecto</h2>
+        <p>
+          Este ejemplo está pensado como práctica para el módulo de Diseño de Interfaces Web,
+          combinando maquetación y JavaScript de forma sencilla y realista.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <!-- PISTA:
+       - Fondo gris claro.
+       - Texto pequeño, centrado.
+       - Una línea superior separando del contenido. -->
+  <footer>
+    <p>© 2025 MiLanding. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
