@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiLanding – Tailwind (Profesor)</title>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+    ></script>
+  </head>
+  <body class="min-h-screen bg-slate-100 text-slate-900 font-sans">
+    <!-- CABECERA STICKY (se adhiere al llegar arriba) -->
+    <header class="sticky top-0 bg-white shadow-sm z-20">
+      <div
+        class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <div class="text-xl font-semibold">MiLanding</div>
+
+        <!-- MENÚ: vertical en móvil, horizontal en escritorio -->
+        <nav
+          id="nav"
+          class="flex hidden absolute right-4 top-full mt-3 w-40 flex-col gap-2 rounded-lg bg-white px-4 py-3 text-sm font-medium shadow-md 
+          md:static md:mt-0 md:flex md:w-auto md:flex-row md:items-center md:gap-8 md:bg-transparent md:shadow-none"
+        >
+          <a href="#inicio" class="hover:text-sky-600">Inicio</a>
+          <a href="#caracteristicas" class="hover:text-sky-600"
+            >Características</a
+          >
+          <a href="#sobre" class="hover:text-sky-600">Sobre nosotros</a>
+        </nav>
+
+        <!-- BOTÓN HAMBURGUESA (solo en móvil) -->
+        <button class="btn-menu text-2xl md:hidden" aria-label="Abrir menú">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main class="pt-6 md:pt-8">
+      <!-- HERO / INICIO -->
+      <section id="inicio" class="bg-gradient-to-r from-sky-500 to-blue-500">
+        <div
+          class="max-w-5xl mx-auto px-4 py-20 flex flex-col items-center text-center text-white"
+        >
+          <h1 class="mb-4 text-3xl md:text-4xl font-semibold">MiLanding</h1>
+          <p class="mb-8 max-w-2xl text-sm md:text-base text-sky-50">
+            Mini landing responsive con menú hamburguesa, pensada para practicar
+            Tailwind, maquetación y un poco de JavaScript.
+          </p>
+          <a
+            href="#caracteristicas"
+            class="inline-block rounded-full bg-white px-8 py-3 text-sm md:text-base font-semibold text-sky-600 shadow hover:-translate-y-0.5 hover:shadow-md transition"
+          >
+            Ver características
+          </a>
+        </div>
+      </section>
+
+      <!-- CARACTERÍSTICAS PRINCIPALES -->
+      <section id="caracteristicas" class="bg-slate-100">
+        <div class="max-w-3xl mx-auto px-4 py-16 text-center">
+          <h2 class="mb-6 text-3xl md:text-4xl font-bold text-slate-900">
+            Características principales
+          </h2>
+          <p class="mb-8 max-w-2xl mx-auto text-sm md:text-base text-slate-700">
+            Esta mini web incluye maquetación responsive, cabecera sticky, menú
+            adaptable a móvil y un pequeño comportamiento con JavaScript.
+          </p>
+          <ul class="space-y-2 text-sm md:text-base text-slate-800">
+            <li>Diseño mobile first</li>
+            <li>Menú hamburguesa en móviles</li>
+            <li>HTML semántico y estructura clara</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SOBRE ESTE PROYECTO -->
+      <section id="sobre" class="bg-white">
+        <div class="max-w-3xl mx-auto px-4 py-16 text-center">
+          <h2 class="mb-6 text-3xl md:text-4xl font-bold text-slate-900">
+            Sobre este proyecto
+          </h2>
+          <p class="max-w-2xl mx-auto text-sm md:text-base text-slate-700">
+            Este ejemplo está pensado como práctica para el módulo de Diseño de
+            Interfaces Web, combinando maquetación y JavaScript de forma
+            sencilla y realista.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-100 border-t border-slate-200">
+      <div
+        class="max-w-5xl mx-auto px-4 py-6 text-center text-xs text-slate-500"
+      >
+        © 2025 MiLanding. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <script src="main_profesor.js"></script>
+  </body>
+</html>
