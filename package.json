@@ -1,0 +1,26 @@
+{
+  "name": "dise-o-de-interfaces",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonioangelcervantes/Dise-o-de-Interfaces.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonioangelcervantes/Dise-o-de-Interfaces/issues"
+  },
+  "homepage": "https://github.com/antonioangelcervantes/Dise-o-de-Interfaces#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.5.0"
+  }
+}
