@@ -210,6 +210,16 @@ function pintarPokemons(listaPokemons) {
     // 3. Añadir clases y contenido
     // 4. Montar la tarjeta
     // 5. Añadirla al contenedor
+
+    // NOTA: aquí tienes un ejemplo de cómo crear el icono de favorito
+    const iconoFavorito = document.createElement("span");
+    iconoFavorito.classList.add("pokemon-card__favorito");
+    iconoFavorito.textContent = "★";
+    if (pokemon.esFavorito) {
+      iconoFavorito.classList.add("pokemon-card__favorito--on");
+    } else {
+      iconoFavorito.classList.add("pokemon-card__favorito--off");
+    }
   }
   */
 }
