@@ -1,0 +1,351 @@
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   ESTILOS GENERALES DEL BODY
+   ============================================================ */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #f3f4f6; /* gris claro */
+  color: #111827; /* gris casi negro */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= MODO OSCURO (TRABAJO ALUMNO) =================
+   - Elegir colores de fondo y texto para el modo oscuro.
+   - IMPORTANTE: luego adaptar también tarjetas, botones, etc.
+*/
+
+body.theme-dark {
+  /* TODO ALUMNO:
+     - Cambia el fondo a un color oscuro
+     - Cambia el color del texto a claro
+     Ejemplo orientativo (puedes modificarlo):
+     background-color: #020617;
+     color: #e5e7eb;
+  */
+}
+
+/* ============================================================
+   CABECERA (HEADER)
+   ============================================================ */
+
+.header {
+  background: linear-gradient(135deg, #ef4444, #f97316); /* rojo → naranja */
+  color: white;
+  padding: 1.5rem 1.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header__titulo {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.header__subtitulo {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   BOTONES GENERALES
+   ============================================================ */
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px; /* forma de pastilla */
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Botón de tema oscuro */
+
+.btn--tema {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* Modo oscuro del botón de tema (TRABAJO ALUMNO) */
+
+body.theme-dark .btn--tema {
+  /* TODO ALUMNO:
+     - Cambia los colores para que tengan sentido en modo oscuro.
+  */
+}
+
+/* Botón de “Ver solo favoritos” */
+
+.btn--favoritos {
+  background-color: #facc15; /* amarillo */
+  color: #1f2937; /* gris oscuro */
+}
+
+/* Estado "activo" del botón de favoritos (TRABAJO ALUMNO) */
+
+.btn--favoritos-activo {
+  /* TODO ALUMNO:
+     Ideas:
+     - Añadir borde
+     - Añadir sombra
+     - Cambiar ligeramente el fondo
+  */
+}
+
+/* ============================================================
+   FILTROS
+   ============================================================ */
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.filtros__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filtros__grupo--tipos {
+  flex: 1; /* que ocupe más espacio */
+}
+
+.filtros__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.filtros__input {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   BOTONES DE TIPO (Fuego, Agua, etc.)
+   ============================================================ */
+
+.btn-tipo {
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
+  margin-right: 0.25rem;
+  margin-top: 0.25rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #f9fafb;
+}
+
+.btn-tipo--activo {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* ============================================================
+   CONTENIDO PRINCIPAL
+   ============================================================ */
+
+.main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contador {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Mensaje de “no hay resultados” */
+
+.mensaje-vacio {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.oculto {
+  display: none;
+}
+
+/* ============================================================
+   GALERÍA DE POKÉMON  (TRABAJO ALUMNO)
+   Aquí la idea es que **maquetes tú** toda la galería.
+   - Usa display: grid o flex (recomendado grid).
+   - Define columnas, filas y separación entre tarjetas (gap).
+   - Controla el ancho mínimo de cada tarjeta.
+   ============================================================ */
+
+.galeria {
+  /* TODO ALUMNO:
+     1. Convertir este contenedor en un GRID o FLEX.
+     2. Hacer que se ajuste de forma responsive
+        (ej: una columna en móvil, más columnas en escritorio).
+     Pistas:
+       - display: grid;
+       - grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+       - gap: 1rem;
+  */
+}
+
+/* ============================================================
+   TARJETA POKÉMON (TRABAJO ALUMNO)
+   Objetivo mínimo:
+   - Fondo blanco
+   - Bordes redondeados
+   - Un poco de padding
+   - Sombra suave
+   - Efecto hover
+   - Icono de favorito arriba a la derecha
+   ============================================================ */
+
+.pokemon-card {
+  /* TODO ALUMNO:
+     - Añadir fondo, borde/borde redondeado, padding.
+     - Añadir sombra suave para efecto "tarjeta".
+     - position: relative; (necesario para colocar la estrella).
+  */
+}
+
+/* Tarjetas en modo oscuro (TRABAJO ALUMNO) */
+body.theme-dark .pokemon-card {
+  /* TODO ALUMNO:
+     - Cambiar color de fondo y bordes para que encaje con el modo oscuro.
+  */
+}
+
+/* Hover tarjeta (TRABAJO ALUMNO) */
+
+.pokemon-card:hover {
+  /* TODO ALUMNO:
+     - Añadir transform (por ejemplo, translateY) y una sombra mayor.
+  */
+}
+
+/* Imagen del Pokémon */
+
+.pokemon-card__img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+/* Nombre */
+
+.pokemon-card__nombre {
+  font-weight: 700;
+  margin: 0.25rem 0 0;
+}
+
+/* Tipo (badge) */
+
+.pokemon-card__tipo {
+  font-size: 0.8rem;
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+/* Nivel */
+
+.pokemon-card__nivel {
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+/* Descripción */
+
+.pokemon-card__descripcion {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Icono de favorito (estrella) */
+
+.pokemon-card__favorito {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Estado no favorito */
+
+.pokemon-card__favorito--off {
+  opacity: 0.3;
+}
+
+/* Estado favorito */
+
+.pokemon-card__favorito--on {
+  opacity: 1;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ============================================================
+   RESPONSIVE (TRABAJO ALUMNO)
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .header__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  /* TODO ALUMNO:
+     - Ajustar columnas de la galería en móvil si hace falta.
+     }
+  */
+}

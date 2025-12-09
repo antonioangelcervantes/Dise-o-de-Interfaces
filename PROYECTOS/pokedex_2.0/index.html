@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokédex 2.0 – Alumno</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div>
+        <h1 class="header__titulo">Pokédex 2.0</h1>
+        <p class="header__subtitulo">Proyecto DIW + DEC</p>
+      </div>
+      <button id="btn-tema" class="btn btn--tema">🌙 Activar modo oscuro</button>
+    </div>
+
+    <section class="filtros">
+      <div class="filtros__grupo">
+        <label class="filtros__label">Buscar por nombre</label>
+        <input id="buscador" class="filtros__input" placeholder="Ej: Pikachu">
+      </div>
+
+      <div class="filtros__grupo filtros__grupo--tipos">
+        <label class="filtros__label">Filtrar por tipo</label>
+        <button class="btn-tipo btn-tipo--activo" data-tipo="todos">Todos</button>
+        <button class="btn-tipo" data-tipo="Fuego">Fuego</button>
+        <button class="btn-tipo" data-tipo="Agua">Agua</button>
+        <button class="btn-tipo" data-tipo="Planta">Planta</button>
+        <button class="btn-tipo" data-tipo="Eléctrico">Eléctrico</button>
+        <button class="btn-tipo" data-tipo="Normal">Normal</button>
+      </div>
+
+      <div class="filtros__grupo">
+        <button id="btn-favoritos" class="btn btn--favoritos">Ver solo favoritos ⭐</button>
+      </div>
+    </section>
+  </header>
+
+  <main class="main">
+    <p id="contador" class="contador">Mostrando 0 Pokémon</p>
+    <section id="contenedor-pokemon" class="galeria"></section>
+    <p id="mensaje-vacio" class="mensaje-vacio oculto">No se encontró ningún Pokémon.</p>
+  </main>
+
+  <footer class="footer">
+    <p>Proyecto Pokédex 2.0 – DIW + DEC</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
