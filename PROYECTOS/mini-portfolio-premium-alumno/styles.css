@@ -1,0 +1,102 @@
+/* =========================================================
+   styles.css (VERSIÓN ALUMNO - GUIADO)
+   NO hay soluciones: solo base mínima + TODOs.
+   ========================================================= */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+
+/* ---------------------------
+   NAVBAR: underline animado
+---------------------------- */
+/* TODO:
+   - .nav-link con position: relative
+   - ::after como línea
+   - transform: scaleX(0) y al hover scaleX(1)
+   - transition (200–400ms)
+*/
+.nav-link { /* TODO */ }
+
+/* ---------------------------
+   BOTONES
+---------------------------- */
+/* TODO:
+   - .btn base: padding, border-radius, font-weight, transición
+   - .btn-primary: fondo claro, texto oscuro
+   - .btn-primary:hover: translateY + box-shadow (hover compuesto)
+   - .btn-secondary: borde, fondo transparente
+   - .btn-secondary:hover: efecto distinto (opacity/scale/borde)
+*/
+.btn { /* TODO */ }
+.btn-primary { /* TODO */ }
+.btn-secondary { /* TODO */ }
+
+/* ---------------------------
+   PROYECTOS (cards)
+---------------------------- */
+/* TODO:
+   - .project-card: overflow-hidden, border-radius, transición
+   - .project-card:hover: elevación + sombra
+   - .project-img: opcional zoom suave en hover
+*/
+.project-card { /* TODO */ }
+.project-img { /* TODO */ }
+
+/* ---------------------------
+   OVERLAY + REVEAL (obligatorio)
+---------------------------- */
+/* TODO:
+   - .project-overlay: position absolute; inset:0;
+     * capa oscura: background rgba o similar
+     * empieza oculto (opacity 0)
+     * aparece al hover del contenedor
+   - .project-overlay-inner:
+     * caja de texto
+     * empieza más abajo (translateY)
+     * opacity 0
+     * al hover: translateY(0) + opacity 1
+   - Si quieres hacerlo con Tailwind, puedes ignorar este bloque y hacerlo con clases.
+*/
+.project-overlay { /* TODO */ }
+.project-overlay-inner { /* TODO */ }
+
+/* Texto de proyecto (opcional: estilo base) */
+.project-tag { /* TODO (opcional) */ }
+.project-title { /* TODO (opcional) */ }
+.project-desc { /* TODO (opcional) */ }
+
+/* ---------------------------
+   SERVICIOS (glassmorphism)
+---------------------------- */
+/* TODO:
+   - .service-card: fondo semitransparente
+   - backdrop-filter: blur(...)
+   - hover: elevación + sombra + cambio de fondo
+*/
+.service-card { /* TODO */ }
+
+/* ---------------------------
+   FORMULARIO (accesibilidad)
+---------------------------- */
+/* TODO:
+   - .field con focus-within:
+     * borde más visible
+     * ring / sombra suave
+     * cambio de fondo opcional
+   - .input con focus visible claro
+*/
+.field { /* TODO */ }
+.field:focus-within { /* TODO */ }
+.input { /* TODO */ }
+.input:focus { /* TODO */ }
+
+/* ---------------------------
+   EXTRA: animación personalizada
+---------------------------- */
+/* TODO:
+   - define @keyframes (fade + slide)
+   - crea una clase (por ejemplo .anim-enter)
+   - aplícala en el HTML donde quieras
+*/
+/* TODO */
