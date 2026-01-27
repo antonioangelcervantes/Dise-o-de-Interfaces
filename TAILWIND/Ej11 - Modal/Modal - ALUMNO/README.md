@@ -2,36 +2,39 @@
 
 ## 🎯 Objetivo
 
-Crear un **modal funcional** usando **Tailwind CSS** y **JavaScript básico**.
+Construir un **modal completamente funcional** usando **Tailwind CSS**.
 
-El modal debe aparecer y desaparecer mediante animaciones suaves,
-sin usar CSS propio ni librerías externas.
+El ejercicio se centra en el **uso de utilidades de Tailwind para crear
+overlays, modales y animaciones**, sin usar CSS propio.
 
 ---
 
 ## 📌 Requisitos obligatorios
 
 1. El modal debe estar **oculto al cargar la página**
-2. Al pulsar el botón **“Abrir modal”**:
-   - Aparece un overlay oscuro
-   - El modal entra con transición
+2. Al pulsar el botón **Abrir modal**:
+   - Debe aparecer un overlay oscuro
+   - El modal debe mostrarse con transición
 3. El modal debe cerrarse:
    - Pulsando el botón **Cerrar**
-   - Pulsando fuera del modal (overlay)
-4. Todo el diseño debe realizarse con **clases Tailwind**
-5. No se permite usar `style`, archivos `.css` ni frameworks externos
+   - Pulsando fuera del modal
+4. El diseño y las animaciones deben realizarse **exclusivamente con Tailwind**
+5. No se permite usar CSS ni estilos en línea
 
 ---
 
 ## 🧠 Pistas
 
-- Usa clases como: `hidden`, `opacity-0`, `opacity-100`, `scale-95`, `scale-100`
-- Las transiciones deben hacerse **solo con Tailwind**
-- El JavaScript solo debe encargarse de **activar o desactivar estados**
+- Usa utilidades de:
+  - posicionamiento (`fixed`, `inset-0`, `flex`)
+  - opacidad (`opacity-*`)
+  - escalado (`scale-*`)
+  - transiciones (`transition`, `duration-*`)
+- El JavaScript solo debe **añadir o quitar clases**
 
 ---
 
-## 📂 Archivos del proyecto
+## 📂 Archivos
 
-- `index.html` → estructura y estilos con Tailwind
-- `main.js` → lógica para abrir y cerrar el modal
+- `index.html` → estructura base (clases a completar)
+- `main.js` → lógica JS (no tocar estructura HTML)

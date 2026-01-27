@@ -1,25 +1,30 @@
-const openBtn = document.getElementById("abrirModal");
-const closeBtn = document.getElementById("cerrarModal");
+const openBtn = document.getElementById("openModal");
+const closeBtn = document.getElementById("closeModal");
 const overlay = document.getElementById("overlay");
 const modal = document.getElementById("modal");
 
-/*
-  TODO 1
-  Al pulsar el botón "Abrir modal":
-  - Mostrar el overlay
-  - Activar la animación del modal
-*/
+openBtn.addEventListener("click", function () {
+  overlay.classList.remove("hidden");
+  modal.classList.remove("opacity-0", "scale-95");
+  modal.classList.add("opacity-100", "scale-100");
+});
 
-/*
-  TODO 2
-  Al pulsar el botón "Cerrar":
-  - Ocultar el modal con animación
-  - Ocultar el overlay
-*/
+closeBtn.addEventListener("click", function () {
+  modal.classList.remove("opacity-100", "scale-100");
+  modal.classList.add("opacity-0", "scale-95");
 
-/*
-  TODO 3
-  Al hacer click sobre el overlay:
-  - Cerrar el modal
-  - IMPORTANTE: no debe cerrarse si se hace click dentro del modal
-*/
+  setTimeout(function () {
+    overlay.classList.add("hidden");
+  }, 300);
+});
+
+overlay.addEventListener("click", function (event) {
+  if (event.target === overlay) {
+    modal.classList.remove("opacity-100", "scale-100");
+    modal.classList.add("opacity-0", "scale-95");
+
+    setTimeout(function () {
+      overlay.classList.add("hidden");
+    }, 300);
+  }
+});
