@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-Portfolio Premium (Alumno)</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS opcional para practicar sin Tailwind -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <!-- ✅ Puedes dejar el tema oscuro con Tailwind o hacerlo en CSS.
+       Si prefieres 100% Tailwind, edita SOLO esta class. -->
+  <body class="bg-slate-950 text-slate-100 min-h-screen">
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header
+      class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800/50 shadow-lg"
+    >
+      <div
+        class="container mx-auto max-w-6xl px-4 md:px-8 py-4 flex items-center justify-between"
+      >
+        <a href="#inicio" class="logo font-semibold tracking-wide">
+          Studio<span class="text-cyan-400">.neo</span>
+        </a>
+
+        <nav class="nav flex gap-8 text-sm">
+          <a
+            class="nav-link relative transition-colors hover:text-cyan-400 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full"
+            href="#inicio"
+            >Inicio</a
+          >
+          <a
+            class="nav-link relative transition-colors hover:text-cyan-400 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full"
+            href="#proyectos"
+            >Proyectos</a
+          >
+          <a
+            class="nav-link relative transition-colors hover:text-cyan-400 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full"
+            href="#servicios"
+            >Servicios</a
+          >
+          <a
+            class="nav-link relative transition-colors hover:text-cyan-400 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full"
+            href="#contacto"
+            >Contacto</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+    <main>
+      <!-- =========================
+           HERO
+           ========================= -->
+
+      <section id="inicio" class="hero py-20 md:py-32">
+        <div class="container mx-auto max-w-6xl px-4 md:px-8">
+          <div
+            class="hero-grid grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+          >
+            <!-- BLOQUE TEXTO -->
+            <div class="hero-content space-y-6">
+              <p
+                class="badge inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-xs px-4 py-2"
+              >
+                ✨ Animaciones, transiciones y overlays
+              </p>
+
+              <h1
+                class="hero-title text-4xl md:text-5xl font-semibold tracking-tight"
+              >
+                Haz que tu web "se sienta pro" sin recargarla.
+              </h1>
+
+              <p class="hero-text text-slate-400 max-w-md">
+                Microinteracciones, efectos visuales y transiciones suaves. Lo
+                justo para que se note nivel.
+              </p>
+
+              <div class="cta flex gap-4 flex-wrap">
+                <a
+                  href="#proyectos"
+                  class="btn btn-primary px-6 py-3 rounded-lg bg-cyan-400 text-slate-950 font-medium transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-cyan-400/50"
+                  >Ver proyectos</a
+                >
+
+                <a
+                  href="#contacto"
+                  class="btn btn-secondary px-6 py-3 rounded-lg border border-slate-700 bg-transparent text-slate-100 font-medium transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-400/5"
+                  >Contactar</a
+                >
+              </div>
+            </div>
+
+            <!-- TARJETA DE PREVIEW -->
+            <aside
+              class="hero-card rounded-2xl border border-slate-700/50 bg-slate-900/50 p-6 shadow-lg shadow-cyan-400/10"
+            >
+              <div
+                class="hero-card-top flex items-center justify-between text-sm text-slate-400 mb-6"
+              >
+                <p>Preview</p>
+                <span
+                  class="mini-badge rounded-full bg-slate-800 text-xs px-3 py-1"
+                  >UI</span
+                >
+              </div>
+
+              <!-- Skeleton -->
+              <div class="skeleton space-y-4 mb-6">
+                <div
+                  class="bar bar-1 h-3 bg-slate-800 rounded-full w-3/4"
+                ></div>
+                <div
+                  class="bar bar-2 h-3 bg-slate-800 rounded-full w-2/3"
+                ></div>
+                <div
+                  class="bar bar-3 h-3 bg-slate-800 rounded-full w-1/2"
+                ></div>
+              </div>
+
+              <!-- Tip -->
+              <div
+                class="tip rounded border border-slate-700/50 bg-slate-800/30 p-4"
+              >
+                <p class="text-sm font-medium mb-2">Tip</p>
+                <p class="text-xs text-slate-400">
+                  Prioriza animar
+                  <code class="bg-slate-800 px-2 py-1 rounded">opacity</code> y
+                  <code class="bg-slate-800 px-2 py-1 rounded">transform</code>.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           PROYECTOS
+           ========================= -->
+
+      <section id="proyectos" class="projects py-20 md:py-32 bg-slate-900/50">
+        <div class="container mx-auto max-w-6xl px-4 md:px-8">
+          <div
+            class="section-head flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12"
+          >
+            <div>
+              <h2
+                class="section-title text-2xl font-semibold tracking-tight mb-2"
+              >
+                Proyectos
+              </h2>
+              <p class="section-subtitle text-sm text-slate-400">
+                6 cards con overlay + reveal (obligatorio).
+              </p>
+            </div>
+            <span class="hint text-xs text-slate-400"
+              >Responsive: 2 cols móvil / 3 escritorio</span
+            >
+          </div>
+
+          <div class="projects-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- CARD 1 -->
+            <article
+              class="project-card group rounded-2xl overflow-hidden border border-slate-700/50 bg-slate-900/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:-translate-y-2"
+            >
+              <img
+                class="project-img w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                src="https://picsum.photos/600/400?random=31"
+                alt="Nebula"
+                loading="lazy"
+              />
+
+              <div
+                class="project-overlay absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end"
+              >
+                <div
+                  class="project-overlay-inner bg-slate-900/90 border-t border-slate-700/50 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <p class="project-tag text-xs text-cyan-400 font-semibold">
+                    Branding
+                  </p>
+                  <h3 class="project-title font-semibold mt-1">Nebula</h3>
+                  <p class="project-desc text-sm text-slate-400">
+                    Overlay al hover + reveal
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article
+              class="project-card group rounded-2xl overflow-hidden border border-slate-700/50 bg-slate-900/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:-translate-y-2"
+            >
+              <img
+                class="project-img w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                src="https://picsum.photos/600/400?random=32"
+                alt="Pulse"
+                loading="lazy"
+              />
+
+              <div
+                class="project-overlay absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end"
+              >
+                <div
+                  class="project-overlay-inner bg-slate-900/90 border-t border-slate-700/50 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <p class="project-tag text-xs text-cyan-400 font-semibold">
+                    UI
+                  </p>
+                  <h3 class="project-title font-semibold mt-1">Pulse</h3>
+                  <p class="project-desc text-sm text-slate-400">
+                    Transiciones suaves
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article
+              class="project-card group rounded-2xl overflow-hidden border border-slate-700/50 bg-slate-900/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:-translate-y-2"
+            >
+              <img
+                class="project-img w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                src="https://picsum.photos/600/400?random=33"
+                alt="Astra"
+                loading="lazy"
+              />
+
+              <div
+                class="project-overlay absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end"
+              >
+                <div
+                  class="project-overlay-inner bg-slate-900/90 border-t border-slate-700/50 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <p class="project-tag text-xs text-cyan-400 font-semibold">
+                    Web
+                  </p>
+                  <h3 class="project-title font-semibold mt-1">Astra</h3>
+                  <p class="project-desc text-sm text-slate-400">
+                    Reveal desde abajo
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 4 -->
+            <article
+              class="project-card group rounded-2xl overflow-hidden border border-slate-700/50 bg-slate-900/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:-translate-y-2"
+            >
+              <img
+                class="project-img w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                src="https://picsum.photos/600/400?random=34"
+                alt="Mono"
+                loading="lazy"
+              />
+
+              <div
+                class="project-overlay absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end"
+              >
+                <div
+                  class="project-overlay-inner bg-slate-900/90 border-t border-slate-700/50 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <p class="project-tag text-xs text-cyan-400 font-semibold">
+                    Ecommerce
+                  </p>
+                  <h3 class="project-title font-semibold mt-1">Mono</h3>
+                  <p class="project-desc text-sm text-slate-400">
+                    Hover premium
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 5 -->
+            <article
+              class="project-card group rounded-2xl overflow-hidden border border-slate-700/50 bg-slate-900/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:-translate-y-2"
+            >
+              <img
+                class="project-img w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                src="https://picsum.photos/600/400?random=35"
+                alt="Glow"
+                loading="lazy"
+              />
+
+              <div
+                class="project-overlay absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end"
+              >
+                <div
+                  class="project-overlay-inner bg-slate-900/90 border-t border-slate-700/50 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <p class="project-tag text-xs text-cyan-400 font-semibold">
+                    Landing
+                  </p>
+                  <h3 class="project-title font-semibold mt-1">Glow</h3>
+                  <p class="project-desc text-sm text-slate-400">
+                    Overlay 2 capas
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 6 -->
+            <article
+              class="project-card group rounded-2xl overflow-hidden border border-slate-700/50 bg-slate-900/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 hover:-translate-y-2"
+            >
+              <img
+                class="project-img w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                src="https://picsum.photos/600/400?random=36"
+                alt="Orbit"
+                loading="lazy"
+              />
+
+              <div
+                class="project-overlay absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end"
+              >
+                <div
+                  class="project-overlay-inner bg-slate-900/90 border-t border-slate-700/50 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <p class="project-tag text-xs text-cyan-400 font-semibold">
+                    App
+                  </p>
+                  <h3 class="project-title font-semibold mt-1">Orbit</h3>
+                  <p class="project-desc text-sm text-slate-400">
+                    Animación suave
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           SERVICIOS
+           ========================= -->
+
+      <section id="servicios" class="services py-20 md:py-32">
+        <div class="container mx-auto max-w-6xl px-4 md:px-8">
+          <h2 class="section-title text-2xl font-semibold tracking-tight mb-2">
+            Servicios
+          </h2>
+          <p class="section-subtitle text-sm text-slate-400 mb-12">
+            Glassmorphism + hover.
+          </p>
+
+          <div class="services-grid grid md:grid-cols-3 gap-6">
+            <article
+              class="service-card rounded-xl border border-slate-700/30 bg-slate-800/30 backdrop-blur p-6 transition-all duration-300 hover:border-cyan-400/50 hover:bg-cyan-400/5 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-1"
+            >
+              <h3 class="font-semibold text-lg mb-3">UI Design</h3>
+              <p class="text-slate-400 text-sm">
+                Componentes limpios, consistentes y reutilizables.
+              </p>
+            </article>
+
+            <article
+              class="service-card rounded-xl border border-slate-700/30 bg-slate-800/30 backdrop-blur p-6 transition-all duration-300 hover:border-cyan-400/50 hover:bg-cyan-400/5 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-1"
+            >
+              <h3 class="font-semibold text-lg mb-3">Maquetación Pro</h3>
+              <p class="text-slate-400 text-sm">
+                Grid, spacing, tipografía y microinteracciones.
+              </p>
+            </article>
+
+            <article
+              class="service-card rounded-xl border border-slate-700/30 bg-slate-800/30 backdrop-blur p-6 transition-all duration-300 hover:border-cyan-400/50 hover:bg-cyan-400/5 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-1"
+            >
+              <h3 class="font-semibold text-lg mb-3">Efectos Visuales</h3>
+              <p class="text-slate-400 text-sm">
+                Overlays, transiciones suaves y animaciones finas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           CONTACTO
+           ========================= -->
+
+      <section id="contacto" class="contact py-20 md:py-32 bg-slate-900/50">
+        <div class="container mx-auto max-w-6xl px-4 md:px-8">
+          <h2 class="section-title text-2xl font-semibold tracking-tight mb-2">
+            Contacto
+          </h2>
+          <p class="section-subtitle text-sm text-slate-400 mb-12">
+            Focus accesible + focus-within obligatorio.
+          </p>
+
+          <form class="form max-w-xl mx-auto space-y-6">
+            <div
+              class="field border border-slate-700/50 rounded-lg p-4 focus-within:border-cyan-400 focus-within:bg-cyan-400/5 focus-within:ring-1 focus-within:ring-cyan-400/50 transition-all duration-300"
+            >
+              <label for="email" class="block text-sm font-medium mb-2"
+                >Email</label
+              >
+              <input
+                class="input w-full bg-transparent text-slate-100 focus:outline-none placeholder-slate-500"
+                id="email"
+                type="email"
+                placeholder="tuemail@ejemplo.com"
+                required
+              />
+            </div>
+
+            <div
+              class="field border border-slate-700/50 rounded-lg p-4 focus-within:border-cyan-400 focus-within:bg-cyan-400/5 focus-within:ring-1 focus-within:ring-cyan-400/50 transition-all duration-300"
+            >
+              <label for="msg" class="block text-sm font-medium mb-2"
+                >Mensaje</label
+              >
+              <textarea
+                class="input w-full bg-transparent text-slate-100 focus:outline-none placeholder-slate-500 resize-none"
+                id="msg"
+                rows="5"
+                placeholder="Cuéntame qué necesitas…"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              class="btn btn-primary w-full px-6 py-3 rounded-lg bg-cyan-400 text-slate-950 font-medium transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-cyan-400/50"
+              type="submit"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="footer border-t border-slate-800 py-8 text-center text-xs text-slate-500 bg-slate-950"
+    >
+      <div class="container mx-auto max-w-6xl px-4 md:px-8">
+        © 2026 Studio.neo
+      </div>
+    </footer>
+  </body>
+</html>
