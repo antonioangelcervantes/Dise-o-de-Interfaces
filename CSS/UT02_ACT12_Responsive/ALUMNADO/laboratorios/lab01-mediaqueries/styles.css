@@ -1,0 +1,4 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+.contenedor { background-color: #e8f1ff; padding: 20px; }
+.aviso { background-color: #fbbf24; padding: 20px; text-align: center; }
